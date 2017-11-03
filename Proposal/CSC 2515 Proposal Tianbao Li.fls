@@ -2,8 +2,8 @@ PWD /home/tianbao/Ad-or-Rej/Proposal
 INPUT /usr/local/texlive/2017/texmf.cnf
 INPUT /usr/local/texlive/2017/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2017/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT CSC 2515 Proposal TIanbao Li.tex
-OUTPUT CSC 2515 Proposal TIanbao Li.log
+INPUT CSC 2515 Proposal Tianbao Li.tex
+OUTPUT CSC 2515 Proposal Tianbao Li.log
 INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/base/size10.clo
@@ -74,9 +74,9 @@ INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/microtype/microtype-pdftex.de
 INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/microtype/microtype.cfg
 INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/microtype/microtype.cfg
 INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/microtype/microtype.cfg
-INPUT CSC 2515 Proposal TIanbao Li.aux
-INPUT CSC 2515 Proposal TIanbao Li.aux
-OUTPUT CSC 2515 Proposal TIanbao Li.aux
+INPUT CSC 2515 Proposal Tianbao Li.aux
+INPUT CSC 2515 Proposal Tianbao Li.aux
+OUTPUT CSC 2515 Proposal Tianbao Li.aux
 INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/t1ptm.fd
 INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/t1ptm.fd
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/adobe/times/ptmr8t.tfm
@@ -84,14 +84,14 @@ INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/hyperref/nameref.sty
 INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/hyperref/nameref.sty
 INPUT /usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 INPUT /usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
-INPUT CSC 2515 Proposal TIanbao Li.out
-INPUT CSC 2515 Proposal TIanbao Li.out
-INPUT CSC 2515 Proposal TIanbao Li.out
-INPUT CSC 2515 Proposal TIanbao Li.out
-OUTPUT CSC 2515 Proposal TIanbao Li.pdf
-INPUT ./CSC 2515 Proposal TIanbao Li.out
-INPUT ./CSC 2515 Proposal TIanbao Li.out
-OUTPUT CSC 2515 Proposal TIanbao Li.out
+INPUT CSC 2515 Proposal Tianbao Li.out
+INPUT CSC 2515 Proposal Tianbao Li.out
+INPUT CSC 2515 Proposal Tianbao Li.out
+INPUT CSC 2515 Proposal Tianbao Li.out
+OUTPUT CSC 2515 Proposal Tianbao Li.pdf
+INPUT ./CSC 2515 Proposal Tianbao Li.out
+INPUT ./CSC 2515 Proposal Tianbao Li.out
+OUTPUT CSC 2515 Proposal Tianbao Li.out
 INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/microtype/mt-ptm.cfg
 INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/microtype/mt-ptm.cfg
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/adobe/times/ptmr8t.tfm
@@ -167,9 +167,9 @@ INPUT /usr/local/texlive/2017/texmf-dist/fonts/vf/adobe/times/ptmri8t.vf
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/adobe/times/ptmri8r.tfm
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/vf/adobe/times/ptmb8t.vf
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/adobe/times/ptmb8r.tfm
-INPUT CSC 2515 Proposal TIanbao Li.aux
-INPUT ./CSC 2515 Proposal TIanbao Li.out
-INPUT ./CSC 2515 Proposal TIanbao Li.out
+INPUT CSC 2515 Proposal Tianbao Li.aux
+INPUT ./CSC 2515 Proposal Tianbao Li.out
+INPUT ./CSC 2515 Proposal Tianbao Li.out
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
