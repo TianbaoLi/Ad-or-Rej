@@ -80,28 +80,26 @@
 
 Nowadays, more and more Chinese students start to take graduate study overseas, usually in the US, Canada, the UK and somewhere else. Then, the problem just comes with it. How could they know which graduate school is the best fit, or more possibly offers admission?
 
-Students usually finish their graduate application is two ways. THe first one is to find an agency for help. Such agencies collect application data for year and give advice based on history cases and percentage on miltiple indicators. However, misjudge always happens just because graduate admission consists of complex evaluation in many areas. The second type of application is called DIY-application, finished by students themselves. Due to lack of information, many students lose better offers.
+Students usually finish their graduate application in two ways. The first one is to find an agency for help. Such agencies collect application data for year and give advice based on history cases and percentage on multiple indicators. However, misjudging always happens just because graduate admission consists of complex evaluation in many areas. The second type of application is called DIY-application, finished by students themselves. Due to lack of information, many students lose better offers.
 
-During the application evaluation, information in many fileds of the student is considered, including TOEFL score, GRE score, GPA, undergraduate school, work experience, research experience and other supplementary materials. Looknig in machine leanring way, these indicators can be features of a certain model. We can use massive admission and rejection cases as training data to fit the admission model of a certain graduate program. Till now, ML rechniques are not wildly used in this area. Comparing to human judgement and finding similiar cases, many machine leanring models seem to have a better prediction such as neural networks and decision tree.
+During the application evaluation, information in many fields of one student is considered, including TOEFL score, GRE score, GPA, undergraduate school, work experience, research experience and other supplementary materials. Looking in the machine learning way, these indicators can be features of a certain model. We can use massive admission and rejection cases as training data to fit the admission model of a certain graduate program. Till now, ML techniques are not wildly used in this area. Comparing to human judgement and finding similar cases, many machine learning models seem to have a better prediction such as neural networks and decision tree.
 
 \section{TODOs}
 
 Work for this project can be divided into two main parts:
 
 \begin{itemize}
-    \item Data collection: here I decide to use data from the bbs 1point3acres\footnote{\url{http://www.1point3acres.com/bbs/}}, the most popular graduate application bbs in China. Many Chinese students post their admission decision here. I decide to write crawler to collection data of admission and rejection.\\
+    \item Data collection: here I decide to use data from the BBS 1point3acres\footnote{\url{http://www.1point3acres.com/bbs/}}, the most popular graduate application BBS in China. Many Chinese students post their admission decision here. I decide to write crawler to collection data of admission and rejection.\\
     Tools to be used: python, python-scrapy, simple NLP skills to deal with plain text description.
-    \item Model training: here I decide to train several popular machine leanring models on such data, including neural networks, decision tree, naive bayes, etc, find better fit model and make optimization.\\
+    \item Model training: here I decide to train several popular machine learning models on such data, including neural networks, decision tree, naive bayes, etc, find better fit model and make optimization.\\
     Tools to be used: python, tenserflow.
 \end{itemize}
 
 \section{Clarification}
 
-This project is going to be finished by myself alone. Several wonderful papers could help with my project.
-
-\section*{References}
+This project is going to be finished by myself alone. Several wonderful papers \cite{gupta2016will} and \cite{keeley1972bayesian} could help with my project.
 
 \bibliographystyle{plain}
-\bibliography{proposal}
+\bibliography{CSC2515_Proposal_TianbaoLi}
 
 \end{document}
