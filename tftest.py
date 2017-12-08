@@ -1,23 +1,21 @@
+import numpy as np
 import tensorflow as tf
 
-w = tf.Variable([0.], tf.float32)
-b = tf.Variable([0.], tf.float32)
+m = 1
+w = [tf.feature_column.numeric_column("x", shape = [m])]
+x_train = np.array([0, 1, 2])
+y_train = np.array([-3, -2, -1])
+x_test = np.array([5])
+y_test = np.array([2])
+n_train = x_train.shape[0]
+n_test = x_test.shape[0]
+estimator = tf.estimator.LinearRegressor(feature_columns = w)
 
-x = tf.placeholder(tf.float32)
-y = tf.placeholder(tf.float32)
-p = w * x + b
+train_fn = tf.estimator.inputs.numpy_input_fn({"x": x_train}, y_train, batch_size=n_train, num_epochs=1000, shuffle=True)
+test_fn = tf.estimator.inputs.numpy_input_fn({"x": x_test}, y_test, batch_size=n_test, num_epochs=1000, shuffle=True)
+estimator.train(input_fn=train_fn, steps=1000)
 
-loss = tf.reduce_sum(tf.square(y - p))
-optimizer = tf.train.GradientDescentOptimizer(0.1)
-train = optimizer.minimize(loss)
-
-x_train = [0, 1, 2]
-y_train = [-3, -2, -1]
-
-sess = tf.Session()
-init = tf.global_variables_initializer()
-sess.run(init)
-
-for i in range(100):
-    sess.run(train, {x: x_train, y: y_train})
-print(sess.run([w, b, loss], {x: x_train, y: y_train}))
+train_score = estimator.evaluate(input_fn=train_fn)
+print(train_score)
+test_score = estimator.evaluate(input_fn=test_fn)
+print(test_score)
