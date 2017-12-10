@@ -36,12 +36,11 @@ for i in info:
         if len(i[9]) != 0:
             gre.append(float(i[9].strip().split(' ')[1].replace('+', '')))
         VQW = i[10].split('/')
-        if len(VQW) != 1:
-            try:
-                for s in VQW:
-                    gre.append(float(s.split(':')[1].strip().strip('\"')))
-            except ValueError:
-                pass
+        try:
+            for s in VQW:
+                gre.append(float(s.split(':')[1].strip().strip('\"')))
+        except ValueError:
+            pass
         undergraduate = i[11].strip()
         under_major = i[12].strip()
         gpa = i[13].strip()
