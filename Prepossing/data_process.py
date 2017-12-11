@@ -25,7 +25,10 @@ for i in info:
         date = i[6].strip()
         toefl = []
         if len(i[7]) != 0:
-            toefl.append(float(i[7].strip().split(' ')[1].replace('+', '')))
+            try:
+                toefl.append(float(i[7].strip().split(' ')[1].replace('+', '')))
+            except IndexError:
+                pass
         RLSW = i[8].split('/')
         try:
             for s in RLSW:
