@@ -3,8 +3,10 @@ from Post import *
 from PostEncoder import *
 import json
 
+json_file = open('json_data.txt', 'w')
+
 info = []
-with open('go_america_to_study_data.csv', 'rb') as csvfile:
+with open('Decommaed.csv', 'r') as csvfile:
     reader = csv.reader(csvfile, quotechar='|')
     for row in reader:
         if len(row) == 0:
@@ -13,10 +15,12 @@ with open('go_america_to_study_data.csv', 'rb') as csvfile:
             info.append(row)
 
 for i in info:
-    print i
-    print info.index(i)
+    #print i
+    if info.index(i) > 10000:
+        print info.index(i)
+    json_str = None
     if len(i) == 0:
-        pass
+        continue
     elif len(i) == 16:
         school = i[0].strip()
         degree = i[1].strip()
@@ -54,9 +58,9 @@ for i in info:
         others = i[14].strip()
         url = i[15].strip()
         post = Post(school, degree, major, result, year, semester, date, toefl, gre, undergraduate, under_major, gpa, gpa_range, gpa_ranking, others, url)
-        print json.dumps(post, indent=4, cls=PostEncoder)
+        json_str = json.dumps(post, indent=4, cls=PostEncoder)
         #print post
-        exit(0)
+        #exit(0)
     elif len(i) == 15:
         school = i[0].strip()
         degree = i[1].strip()
@@ -119,6 +123,7 @@ for i in info:
         others = i[13].strip()
         url = i[14].strip()
         post = Post(school, degree, major, result, year, semester, date, toefl, gre, undergraduate, under_major, gpa, gpa_range, gpa_ranking, others, url)
+        json_str = json.dumps(post, indent=4, cls=PostEncoder)
         #print 15
         #print post
         #exit(0)
@@ -160,12 +165,18 @@ for i in info:
         others = i[12].strip()
         url = i[13].strip()
         post = Post(school, degree, major, result, year, semester, date, toefl, gre, undergraduate, under_major, gpa, gpa_range, gpa_ranking, others, url)
+        json_str = json.dumps(post, indent=4, cls=PostEncoder)
         #print 14
         #print post
         #exit(0)
     else:
-        #print len(i)
+        print info.index(i)
+        print len(i)
+        print i
         #for x in i:
         #    print x
-        #exit(0)
+        exit(0)
         pass
+    json_file.write(json_str + '\n')
+
+json_file.close()
