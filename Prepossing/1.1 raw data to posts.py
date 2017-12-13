@@ -1,5 +1,7 @@
 import csv
 from Post import *
+from PostEncoder import *
+import json
 
 info = []
 with open('go_america_to_study_data.csv', 'rb') as csvfile:
@@ -52,9 +54,9 @@ for i in info:
         others = i[14].strip()
         url = i[15].strip()
         post = Post(school, degree, major, result, year, semester, date, toefl, gre, undergraduate, under_major, gpa, gpa_range, gpa_ranking, others, url)
-        #print 16
+        print json.dumps(post, indent=4, cls=PostEncoder)
         #print post
-        #exit(0)
+        exit(0)
     elif len(i) == 15:
         school = i[0].strip()
         degree = i[1].strip()
