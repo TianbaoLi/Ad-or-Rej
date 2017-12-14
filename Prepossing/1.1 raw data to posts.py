@@ -6,7 +6,7 @@ import json
 json_file = open('json_data.txt', 'w')
 
 info = []
-with open('Decommaed.csv', 'r') as csvfile:
+with open('CommaFixed.csv', 'r') as csvfile:
     reader = csv.reader(csvfile, quotechar='|')
     for row in reader:
         if len(row) == 0:
@@ -16,8 +16,8 @@ with open('Decommaed.csv', 'r') as csvfile:
 
 for i in info:
     #print i
-    if info.index(i) > 10000:
-        print info.index(i)
+    #if info.index(i) > 10000:
+    #    print info.index(i)
     json_str = None
     if len(i) == 0:
         continue
@@ -34,22 +34,28 @@ for i in info:
             try:
                 toefl.append(float(i[7].strip().split(' ')[1].replace('+', '')))
             except IndexError:
-                pass
+                print IndexError, 'toefl total', [7], info.index(i)
         RLSW = i[8].split('/')
         try:
             for s in RLSW:
-                toefl.append(float(s.split(':')[1].strip().strip('\"')))
+                if len(s.split(':')[1].strip()) == 0 or s.split(':')[1].strip() == '\"':
+                    toefl.append(0)
+                else:
+                    toefl.append(float(s.split(':')[1].strip().strip('\"')))
         except ValueError:
-            pass
+            print ValueError, RLSW, 'toefl', info.index(i)
         gre = []
         if len(i[9]) != 0:
             gre.append(float(i[9].strip().split(' ')[1].replace('+', '')))
         VQW = i[10].split('/')
         try:
             for s in VQW:
-                gre.append(float(s.split(':')[1].strip().strip('\"')))
+                if len(s.split(':')[1].strip()) == 0 or s.split(':')[1].strip() == '\"':
+                    gre.append(0)
+                else:
+                    gre.append(float(s.split(':')[1].strip().strip('\"')))
         except ValueError:
-            pass
+            print ValueError, VQW, 'gre', info.index(i)
         undergraduate = i[11].strip()
         under_major = i[12].strip()
         gpa = i[13].strip()
@@ -78,18 +84,24 @@ for i in info:
                     RLSW = i[7].split('/')
                     try:
                         for s in RLSW:
-                            toefl.append(float(s.split(':')[1].strip().strip('\"')))
+                            if len(s.split(':')[1].strip()) == 0 or s.split(':')[1].strip() == '\"':
+                                toefl.append(0)
+                            else:
+                                toefl.append(float(s.split(':')[1].strip().strip('\"')))
                     except ValueError:
-                        pass
+                        print ValueError, RLSW, 'toefl', info.index(i)
             gre = []
             if len(i[8]) != 0:
                 gre.append(float(i[8].strip().split(' ')[1].replace('+', '')))
             VQW = i[9].split('/')
             try:
                 for s in VQW:
-                    gre.append(float(s.split(':')[1].strip().strip('\"').replace('+', '')))
+                    if len(s.split(':')[1].strip()) == 0 or s.split(':')[1].strip() == '\"':
+                        gre.append(0)
+                    else:
+                        gre.append(float(s.split(':')[1].strip().strip('\"')))
             except ValueError:
-                pass
+                print ValueError, VQW, 'gre', info.index(i)
         else:
             toefl = []
             gre = []
@@ -99,9 +111,12 @@ for i in info:
             if len(RLSW) != 1:
                 try:
                     for s in RLSW:
-                        toefl.append(float(s.split(':')[1].strip().strip('\"')))
+                        if len(s.split(':')[1].strip()) == 0 or s.split(':')[1].strip() == '\"':
+                            toefl.append(0)
+                        else:
+                            toefl.append(float(s.split(':')[1].strip().strip('\"')))
                 except ValueError:
-                    pass
+                    print ValueError, RLSW, 'toefl', info.index(i)
             gre = []
             if len(i[8]) != 0:
                 if i[8].startswith('\"Overall'):
@@ -111,9 +126,12 @@ for i in info:
                     if len(VQW) != 1:
                         try:
                             for s in VQW:
-                                gre.append(float(s.split(':')[1].strip().strip('\"')))
+                                if len(s.split(':')[1].strip()) == 0 or s.split(':')[1].strip() == '\"':
+                                    gre.append(0)
+                                else:
+                                    gre.append(float(s.split(':')[1].strip().strip('\"')))
                         except ValueError:
-                            pass
+                            print ValueError, VQW, 'gre', info.index(i)
 
         undergraduate = i[10].strip()
         under_major = i[11].strip()
@@ -143,9 +161,12 @@ for i in info:
                 RLSW = i[7].split('/')
                 try:
                     for s in RLSW:
-                        toefl.append(float(s.split(':')[1].strip().strip('\"')))
+                        if len(s.split(':')[1].strip()) == 0 or s.split(':')[1].strip() == '\"':
+                            toefl.append(0)
+                        else:
+                            toefl.append(float(s.split(':')[1].strip().strip('\"')))
                 except ValueError:
-                    pass
+                    print ValueError, RLSW, 'toefl', info.index(i)
         gre = []
         if len(i[8]) != 0:
             if i[8].startswith('\"Overall'):
@@ -154,9 +175,12 @@ for i in info:
                 VQW = i[8].split('/')
                 try:
                     for s in VQW:
-                        gre.append(float(s.split(':')[1].strip().strip('\"')))
+                        if len(s.split(':')[1].strip()) == 0 or s.split(':')[1].strip() == '\"':
+                            gre.append(0)
+                        else:
+                            gre.append(float(s.split(':')[1].strip().strip('\"')))
                 except ValueError:
-                    pass
+                    print ValueError, VQW, 'gre', info.index(i)
         undergraduate = i[9].strip()
         under_major = i[10].strip()
         gpa = i[11].strip()
@@ -170,13 +194,13 @@ for i in info:
         #print post
         #exit(0)
     else:
+        print "ERROR"
         print info.index(i)
         print len(i)
         print i
         #for x in i:
         #    print x
         exit(0)
-        pass
     json_file.write(json_str + '\n')
 
 json_file.close()
