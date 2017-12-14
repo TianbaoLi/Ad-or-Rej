@@ -1,7 +1,13 @@
+# coding=utf-8
+
 import csv
 from Post import *
 from PostEncoder import *
 import json
+import sys
+
+reload(sys)
+sys.setdefaultencoding('utf-8')
 
 json_file = open('json_data.txt', 'w')
 
@@ -64,7 +70,7 @@ for i in info:
         others = i[14].strip()
         url = i[15].strip()
         post = Post(school, degree, major, result, year, semester, date, toefl, gre, undergraduate, under_major, gpa, gpa_range, gpa_ranking, others, url)
-        json_str = json.dumps(post, indent=4, cls=PostEncoder)
+        json_str = json.dumps(post, indent=4, cls=PostEncoder, ensure_ascii=False)
         #print post
         #exit(0)
     elif len(i) == 15:
@@ -141,7 +147,7 @@ for i in info:
         others = i[13].strip()
         url = i[14].strip()
         post = Post(school, degree, major, result, year, semester, date, toefl, gre, undergraduate, under_major, gpa, gpa_range, gpa_ranking, others, url)
-        json_str = json.dumps(post, indent=4, cls=PostEncoder)
+        json_str = json.dumps(post, indent=4, cls=PostEncoder, ensure_ascii=False)
         #print 15
         #print post
         #exit(0)
@@ -189,7 +195,7 @@ for i in info:
         others = i[12].strip()
         url = i[13].strip()
         post = Post(school, degree, major, result, year, semester, date, toefl, gre, undergraduate, under_major, gpa, gpa_range, gpa_ranking, others, url)
-        json_str = json.dumps(post, indent=4, cls=PostEncoder)
+        json_str = json.dumps(post, indent=4, cls=PostEncoder, ensure_ascii=False)
         #print 14
         #print post
         #exit(0)
