@@ -24,6 +24,9 @@ with open('json_data.txt', 'r') as file:
     for line in file:
         post_dict = json.loads(line)
         post = decode_post(post_dict[u'__Post__'])
-        post.school = calibrate_school(university_list, post.school)
-        #ff.write(str(post.school) + '\n')
+
+        #post.school = calibrate_school(university_list, post.school)
+
+        #post.degree = calibrate_degree(post.degree)
+        #ff.write(str(post.degree) + '\n')
 ff.close()

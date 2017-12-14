@@ -13,3 +13,12 @@ def calibrate_school(university_list, school):
             scores[uni] = fuzz.partial_ratio(school, uni)
         choice = max(scores, key=scores.get)
         return university_list[choice]
+
+def calibrate_degree(degree):
+    if degree.find('M') != -1 or degree.find('m') != -1:
+        return 1
+    elif degree.find('D') != -1 or degree.find('d') != -1:
+        return 2
+    else:
+        print degree
+        exit(0)
