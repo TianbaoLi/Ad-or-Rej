@@ -65,11 +65,10 @@ for i in info:
         undergraduate = i[11].strip()
         under_major = i[12].strip()
         gpa = i[13].strip()
-        gpa_range = i[13].strip()
         gpa_ranking = i[13].strip()
         others = i[14].strip()
         url = i[15].strip()
-        post = Post(school, degree, major, result, year, semester, date, toefl, gre, undergraduate, under_major, gpa, gpa_range, gpa_ranking, others, url)
+        post = Post(school, degree, major, result, year, semester, date, toefl, gre, undergraduate, under_major, gpa, gpa_ranking, others, url)
         json_str = json.dumps(post, cls=PostEncoder, ensure_ascii=False)
         #print post
         #exit(0)
@@ -142,11 +141,10 @@ for i in info:
         undergraduate = i[10].strip()
         under_major = i[11].strip()
         gpa = i[12].strip()
-        gpa_range = i[12].strip()
         gpa_ranking = i[12].strip()
         others = i[13].strip()
         url = i[14].strip()
-        post = Post(school, degree, major, result, year, semester, date, toefl, gre, undergraduate, under_major, gpa, gpa_range, gpa_ranking, others, url)
+        post = Post(school, degree, major, result, year, semester, date, toefl, gre, undergraduate, under_major, gpa, gpa_ranking, others, url)
         json_str = json.dumps(post, cls=PostEncoder, ensure_ascii=False)
         #print 15
         #print post
@@ -190,11 +188,10 @@ for i in info:
         undergraduate = i[9].strip()
         under_major = i[10].strip()
         gpa = i[11].strip()
-        gpa_range = i[11].strip()
         gpa_ranking = i[11].strip()
         others = i[12].strip()
         url = i[13].strip()
-        post = Post(school, degree, major, result, year, semester, date, toefl, gre, undergraduate, under_major, gpa, gpa_range, gpa_ranking, others, url)
+        post = Post(school, degree, major, result, year, semester, date, toefl, gre, undergraduate, under_major, gpa, gpa_ranking, others, url)
         json_str = json.dumps(post, cls=PostEncoder, ensure_ascii=False)
         #print 14
         #print post

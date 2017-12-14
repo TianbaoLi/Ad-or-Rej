@@ -3,7 +3,7 @@ class Post():
     Store info for each post in the data
     '''
 
-    def __init__(self, school='', degree='', major='', result='', year=0, semester='', date='', toefl_total=0, toefl=[0,0,0,0], gre_total=0, gre=[0,0,0,0], undergraduate='', under_major='', gpa=0, gpa_range='', gpa_ranking='', others='', url=''):
+    def __init__(self, school='', degree='', major='', result='', year=0, semester='', date='', toefl_total=0, toefl=[0,0,0,0], gre_total=0, gre=[0,0,0,0], undergraduate='', under_major='', gpa=0, gpa_ranking='', others='', url=''):
         self.school = school #ranking
         self.degree = degree #1:master 2:phd
         self.major = major
@@ -25,7 +25,6 @@ class Post():
         self.undergraduate = undergraduate
         self.under_major = under_major
         self.gpa = gpa
-        self.gpa_range = gpa_range
         self.gpa_ranking = gpa_ranking
         self.others = others
         self.url = url

@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5713eab5-1bdb-4624-8a1a-3bd5078c216f" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Prepossing/1.1_raw_data_to_posts.py" afterPath="$PROJECT_DIR$/Prepossing/1.1_raw_data_to_posts.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Prepossing/1.2_calibrate_data.py" afterPath="$PROJECT_DIR$/Prepossing/1.2_calibrate_data.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Prepossing/Calibrator.py" afterPath="$PROJECT_DIR$/Prepossing/Calibrator.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Prepossing/Post.py" afterPath="$PROJECT_DIR$/Prepossing/Post.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Prepossing/PostDecoder.py" afterPath="$PROJECT_DIR$/Prepossing/PostDecoder.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,7 +20,7 @@
     <SUITE FILE_PATH="coverage/Ad_or_Rej$2_1_fix_university.coverage" NAME="2.1 fix university Coverage Results" MODIFIED="1513283339531" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Prepossing" />
     <SUITE FILE_PATH="coverage/Ad_or_Rej$data_process.coverage" NAME="data_process Coverage Results" MODIFIED="1513137521799" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Prepossing" />
     <SUITE FILE_PATH="coverage/Ad_or_Rej$1_1_raw_data_to_posts.coverage" NAME="1.1 raw data to posts Coverage Results" MODIFIED="1513276412282" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Prepossing" />
-    <SUITE FILE_PATH="coverage/Ad_or_Rej$1_2_calibrate_data.coverage" NAME="1.2_calibrate_data Coverage Results" MODIFIED="1513288490282" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Prepossing" />
+    <SUITE FILE_PATH="coverage/Ad_or_Rej$1_2_calibrate_data.coverage" NAME="1.2_calibrate_data Coverage Results" MODIFIED="1513289467345" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Prepossing" />
     <SUITE FILE_PATH="coverage/Ad_or_Rej$tftest.coverage" NAME="tftest Coverage Results" MODIFIED="1512587227511" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Ad_or_Rej$1_0_delete_fucking_comma.coverage" NAME="1.0 delete fucking comma Coverage Results" MODIFIED="1513196353603" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Prepossing" />
   </component>
@@ -27,28 +29,18 @@
       <file leaf-file-name="Post.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Prepossing/Post.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="22" column="30" lean-forward="true" selection-start-line="20" selection-start-column="8" selection-end-line="22" selection-end-column="30" />
+            <state relative-caret-position="459">
+              <caret line="26" column="16" lean-forward="false" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="16" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="json_data.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Prepossing/json_data.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="10634" column="569" lean-forward="true" selection-start-line="10634" selection-start-column="569" selection-end-line="10634" selection-end-column="569" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="1.2_calibrate_data.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="1.2_calibrate_data.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Prepossing/1.2_calibrate_data.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="531">
-              <caret line="32" column="25" lean-forward="false" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
+            <state relative-caret-position="234">
+              <caret line="13" column="31" lean-forward="true" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -59,11 +51,21 @@
       <file leaf-file-name="Calibrator.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Prepossing/Calibrator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="639">
-              <caret line="84" column="64" lean-forward="true" selection-start-line="84" selection-start-column="25" selection-end-line="84" selection-end-column="64" />
+            <state relative-caret-position="279">
+              <caret line="71" column="23" lean-forward="true" selection-start-line="71" selection-start-column="23" selection-end-line="71" selection-end-column="23" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="json_data.txt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Prepossing/json_data.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="267">
+              <caret line="10476" column="526" lean-forward="false" selection-start-line="10476" selection-start-column="507" selection-end-line="10476" selection-end-column="526" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -79,8 +81,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>&quot;R: 29(R)+25(L)+20(S)+24(W) = 98 /                    L:  /                    S:  /                    W:&quot;</find>
-      <find>R: 29+29+23+20 /                    L:  /                    S:  /                    W:</find>
       <find>R: 28 29 22 25 /                    L:  /                    S:  /                    W:</find>
       <find>R: d</find>
       <find>V: 157+164+4 /                    Q:  /                    AW:</find>
@@ -108,6 +108,8 @@
       <find>拒</find>
       <find>result</find>
       <find>year</find>
+      <find>gpa</find>
+      <find>gpa_range</find>
       <find>[149.0, 164.0, 3.0]</find>
     </findStrings>
     <replaceStrings>
@@ -162,7 +164,6 @@
         <option value="$PROJECT_DIR$/Prepossing/0.2 fill in necessary comma.py" />
         <option value="$PROJECT_DIR$/Prepossing/CommaFixed.csv" />
         <option value="$PROJECT_DIR$/Prepossing/1.1 raw data to posts.py" />
-        <option value="$PROJECT_DIR$/Prepossing/PostDecoder.py" />
         <option value="$PROJECT_DIR$/Prepossing/2.1 fix university.py" />
         <option value="$PROJECT_DIR$/Prepossing/SchoolCalibrator.py" />
         <option value="$PROJECT_DIR$/Prepossing/1.2 calibrate_data.py" />
@@ -170,9 +171,11 @@
         <option value="$PROJECT_DIR$/Prepossing/timesData.csv" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/Prepossing/json_data.txt" />
-        <option value="$PROJECT_DIR$/Prepossing/Post.py" />
         <option value="$PROJECT_DIR$/Prepossing/Calibrator.py" />
         <option value="$PROJECT_DIR$/Prepossing/1.2_calibrate_data.py" />
+        <option value="$PROJECT_DIR$/Prepossing/Post.py" />
+        <option value="$PROJECT_DIR$/Prepossing/1.1_raw_data_to_posts.py" />
+        <option value="$PROJECT_DIR$/Prepossing/PostDecoder.py" />
       </list>
     </option>
   </component>
@@ -374,7 +377,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2607362" sideWeight="0.50188476" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25664622" sideWeight="0.49811524" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25664622" sideWeight="0.49811524" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1448573" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -606,14 +609,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Prepossing/0.1_delete_fucking_comma.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Prepossing/Decommaed.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="202">
@@ -626,30 +621,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="319">
           <caret line="10448" column="191" lean-forward="true" selection-start-line="10448" selection-start-column="191" selection-end-line="10448" selection-end-column="191" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Prepossing/0.2_fill_in_necessary_comma.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="27" lean-forward="false" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Prepossing/PostEncoder.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="36" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Prepossing/PostDecoder.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -680,47 +651,77 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Prepossing/1.1_raw_data_to_posts.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="15" column="47" lean-forward="true" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
-          <folding>
-            <element signature="e#16#26#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="340">
+          <caret line="197" column="16" lean-forward="true" selection-start-line="197" selection-start-column="16" selection-end-line="197" selection-end-column="16" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Prepossing/json_data.txt">
+    <entry file="file://$PROJECT_DIR$/Prepossing/0.2_fill_in_necessary_comma.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="10634" column="569" lean-forward="true" selection-start-line="10634" selection-start-column="569" selection-end-line="10634" selection-end-column="569" />
+        <state relative-caret-position="54">
+          <caret line="3" column="27" lean-forward="false" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Prepossing/PostDecoder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Prepossing/PostEncoder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="36" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Prepossing/0.1_delete_fucking_comma.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" column="31" lean-forward="false" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Prepossing/Post.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="22" column="30" lean-forward="true" selection-start-line="20" selection-start-column="8" selection-end-line="22" selection-end-column="30" />
+        <state relative-caret-position="459">
+          <caret line="26" column="16" lean-forward="false" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="16" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Prepossing/1.2_calibrate_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" column="31" lean-forward="true" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Prepossing/Calibrator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="639">
-          <caret line="84" column="64" lean-forward="true" selection-start-line="84" selection-start-column="25" selection-end-line="84" selection-end-column="64" />
+        <state relative-caret-position="279">
+          <caret line="71" column="23" lean-forward="true" selection-start-line="71" selection-start-column="23" selection-end-line="71" selection-end-column="23" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Prepossing/1.2_calibrate_data.py">
+    <entry file="file://$PROJECT_DIR$/Prepossing/json_data.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="531">
-          <caret line="32" column="25" lean-forward="false" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="267">
+          <caret line="10476" column="526" lean-forward="false" selection-start-line="10476" selection-start-column="507" selection-end-line="10476" selection-end-column="526" />
+          <folding />
         </state>
       </provider>
     </entry>

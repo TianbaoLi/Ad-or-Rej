@@ -83,3 +83,6 @@ def calibrate_gre(gre):
     gre_quantity = gre[1]
     gre_writing = gre[2]
     return gre_total, gre, gre_verbal, gre_quantity, gre_writing
+
+def calibrate_gpa(gpa):
+    print gpa
