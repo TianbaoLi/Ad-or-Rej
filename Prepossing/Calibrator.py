@@ -56,7 +56,11 @@ def calibrate_toefl(toefl):
     else:
         print toefl
         exit(0)
-    return toefl_total, toefl
+    toefl_reading = toefl[0]
+    toefl_listening = toefl[1]
+    toefl_speaking = toefl[2]
+    toefl_writing = toefl[3]
+    return toefl_total, toefl, toefl_reading, toefl_listening, toefl_speaking, toefl_writing
 
 def calibrate_gre(gre):
     gre_total = 0.0
@@ -75,4 +79,7 @@ def calibrate_gre(gre):
     else:
         print gre
         exit(0)
-    return gre_total, gre
+    gre_verbal = gre[0]
+    gre_quantity = gre[1]
+    gre_writing = gre[2]
+    return gre_total, gre, gre_verbal, gre_quantity, gre_writing

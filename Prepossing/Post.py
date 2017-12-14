@@ -12,8 +12,15 @@ class Post():
         self.semester = semester
         self.date = date
         self.toefl_total = toefl_total #total score, float
+        self.toefl_reading = 0.0
+        self.toefl_listening = 0.0
+        self.toefl_speaking = 0.0
+        self.toefl_writing = 0.0
         self.toefl = toefl  #list of floats, [reading listening speaking writing]
         self.gre_total = gre_total  #total score, float
+        self.gre_verbal = 0.0
+        self.gre_quantity = 0.0
+        self.gre_writing = 0.0
         self.gre = gre #list of floats, [verbal quantity writing]
         self.undergraduate = undergraduate
         self.under_major = under_major
