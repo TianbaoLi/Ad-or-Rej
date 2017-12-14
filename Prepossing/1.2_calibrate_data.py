@@ -26,13 +26,10 @@ with open('json_data.txt', 'r') as file:
         post = decode_post(post_dict[u'__Post__'])
 
         #post.school = calibrate_school(university_list, post.school)
-
         #post.degree = calibrate_degree(post.degree)
-
         #post.result = calibrate_result(post.result)
-
         #post.year = calibrate_year(post.year)
-
-        post.toefl_total, post.toefl = calibrate_toefl(post.toefl)
-        ff.write(str(post.toefl_total) + str(post.toefl) + '\n')
+        #post.toefl_total, post.toefl = calibrate_toefl(post.toefl)
+        post.gre_total, post.gre = calibrate_gre(post.gre)
+        ff.write(str(post.gre_total) + str(post.gre) + '\n')
 ff.close()

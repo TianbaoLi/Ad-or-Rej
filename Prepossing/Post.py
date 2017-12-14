@@ -13,8 +13,8 @@ class Post():
         self.date = date
         self.toefl_total = toefl_total #total score, float
         self.toefl = toefl  #list of floats, [reading listening speaking writing]
-        self.gre_total = gre_total
-        self.gre = gre #Total Verbal Quantity Writing
+        self.gre_total = gre_total  #total score, float
+        self.gre = gre #list of floats, [verbal quantity writing]
         self.undergraduate = undergraduate
         self.under_major = under_major
         self.gpa = gpa

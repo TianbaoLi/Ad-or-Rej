@@ -57,3 +57,22 @@ def calibrate_toefl(toefl):
         print toefl
         exit(0)
     return toefl_total, toefl
+
+def calibrate_gre(gre):
+    gre_total = 0.0
+    if  gre == None:
+        gre = [0, 0, 0]
+    elif len(gre) == 4:
+        gre_total = gre[0]
+        gre = gre[1 : 4]
+    elif len(gre) == 3:
+        gre_total = sum(gre)
+    elif len(gre) == 0:
+        gre = [0, 0, 0]
+    elif len(gre) == 1:
+        gre_total = gre[0]
+        gre = [0, 0, 0]
+    else:
+        print gre
+        exit(0)
+    return gre_total, gre
