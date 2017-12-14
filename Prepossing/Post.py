@@ -7,7 +7,7 @@ class Post():
         self.school = school #ranking
         self.degree = degree #1:master 2:phd
         self.major = major
-        self.result = result
+        self.result = result #1:admission or offer 0:refuse
         self.year = year
         self.semester = semester
         self.date = date

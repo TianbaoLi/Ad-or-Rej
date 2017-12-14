@@ -22,3 +22,12 @@ def calibrate_degree(degree):
     else:
         print degree
         exit(0)
+
+def calibrate_result(result):
+    if result.find('A') != -1 or result.find('a') != -1 or result.find('O') != -1 or result.find('o') != -1:
+        return 1
+    elif result.find('R') != -1 or result.find('r') != -1:
+        return 0
+    else:
+        print result
+        exit(0)
