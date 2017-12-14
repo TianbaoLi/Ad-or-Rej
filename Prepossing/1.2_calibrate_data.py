@@ -31,6 +31,8 @@ with open('json_data.txt', 'r') as file:
 
         #post.result = calibrate_result(post.result)
 
-        post.year = calibrate_year(post.year)
-        ff.write(str(post.year) + '\n')
+        #post.year = calibrate_year(post.year)
+
+        post.toefl_total, post.toefl = calibrate_toefl(post.toefl)
+        ff.write(str(post.toefl_total) + str(post.toefl) + '\n')
 ff.close()

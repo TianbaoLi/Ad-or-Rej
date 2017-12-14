@@ -38,3 +38,22 @@ def calibrate_year(year):
     except ValueError:
         print year
         exit(0)
+
+def calibrate_toefl(toefl):
+    toefl_total = 0.0
+    if  toefl == None:
+        toefl = [0, 0, 0, 0]
+    elif len(toefl) == 5:
+        toefl_total = toefl[0]
+        toefl = toefl[1 : 5]
+    elif len(toefl) == 4:
+        toefl_total = sum(toefl)
+    elif len(toefl) == 0:
+        toefl = [0, 0, 0, 0]
+    elif len(toefl) == 1:
+        toefl_total = toefl[0]
+        toefl = [0, 0, 0, 0]
+    else:
+        print toefl
+        exit(0)
+    return toefl_total, toefl
