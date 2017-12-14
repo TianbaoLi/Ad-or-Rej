@@ -29,6 +29,8 @@ with open('json_data.txt', 'r') as file:
 
         #post.degree = calibrate_degree(post.degree)
 
-        post.result = calibrate_result(post.result)
-        ff.write(str(post.result) + '\n')
+        #post.result = calibrate_result(post.result)
+
+        post.year = calibrate_year(post.year)
+        ff.write(str(post.year) + '\n')
 ff.close()

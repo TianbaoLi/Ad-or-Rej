@@ -31,3 +31,10 @@ def calibrate_result(result):
     else:
         print result
         exit(0)
+
+def calibrate_year(year):
+    try:
+        return int(year)
+    except ValueError:
+        print year
+        exit(0)

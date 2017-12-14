@@ -8,7 +8,7 @@ class Post():
         self.degree = degree #1:master 2:phd
         self.major = major
         self.result = result #1:admission or offer 0:refuse
-        self.year = year
+        self.year = year #year with int
         self.semester = semester
         self.date = date
         self.toefl_total = toefl_total
