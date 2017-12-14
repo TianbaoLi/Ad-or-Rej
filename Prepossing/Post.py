@@ -11,7 +11,9 @@ class Post():
         self.year = year
         self.semester = semester
         self.date = date
+        self.toefl_total = None
         self.toefl = toefl #Total Reading Listening Speaking Writing
+        self.gre_total = None
         self.gre = gre #Total Verbal Quantity Writing
         self.undergraduate = undergraduate
         self.under_major = under_major
