@@ -1,6 +1,8 @@
 import numpy as np
 import tensorflow as tf
+from LoadData import *
 
+'''
 m = 1
 w = [tf.feature_column.numeric_column("x", shape = [m])]
 x_train = np.array([0, 1, 2])
@@ -19,3 +21,11 @@ train_score = estimator.evaluate(input_fn=train_fn)
 print(train_score)
 test_score = estimator.evaluate(input_fn=test_fn)
 print(test_score)
+'''
+
+def main():
+    data, label = load_data("Preprocessing/normalized.npy")
+
+
+if __name__ == "__main__":
+    main()

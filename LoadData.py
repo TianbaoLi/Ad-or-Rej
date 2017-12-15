@@ -1,10 +1,8 @@
 from sklearn.model_selection import train_test_split
-import os
 import numpy as np
 
-def load_data(data_dir, stem):
-    path = os.path.join(data_dir, ".npy")
-    raw_data = np.load(path)
+def load_data(data_dir):
+    raw_data = np.load(data_dir)
     label, data = np.split(raw_data, [1])
 
     return data, label
