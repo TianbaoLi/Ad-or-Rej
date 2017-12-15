@@ -113,7 +113,7 @@ def SVM(tfidf_train, train_labels, tfidf_test, test_labels):
     # training the support vector machine model
     splits = 5
     kf = KFold(splits, shuffle = True, random_state = 0)
-    Cs = [0.01, 0.1, 1, 5]
+    Cs = [0.1, 1, 5, 10, 100, 1000]
     scores = []
     for c in Cs:
         model = svm.LinearSVC(penalty = "l1", dual = False, tol = 1e-3, C = c)
@@ -185,7 +185,7 @@ def NN(tfidf_train, train_labels, tfidf_test, test_labels):
     # training the neural network model
     splits = 5
     kf = KFold(splits, shuffle = True, random_state = 0)
-    As = [1e-8, 1e-6, 1e-4, 0.01, 0.1, 1]
+    As = [1e-8, 1e-6, 1e-4, 0.01, 0.1, 1, 10]
     scores = []
     for a in As:
         model = MLPClassifier(alpha = a, early_stopping = True)
@@ -200,12 +200,12 @@ def NN(tfidf_train, train_labels, tfidf_test, test_labels):
     train_pred = model.predict(tfidf_train)
     print('Neural network train accuracy = {}'.format((train_pred == train_labels).mean()))
     test_pred = model.predict(tfidf_test)
+    print test_pred
     print('Neural network test accuracy = {}'.format((test_pred == test_labels).mean()))
 
 def main():
     X, Y = load_data("Preprocessing/filled.npy")
     X_train, X_test, Y_train, Y_test = split_data(X, Y)
-    #print ma.masked_outside(X_train, 0, 1)
 
     print('### MultinomialNB ###')
     mnb_model = mnb(ma.masked_outside(X_train, 0, 1), ma.masked_outside(Y_train, 0, 1), ma.masked_outside(X_test, 0, 1), ma.masked_outside(Y_test, 0, 1))
