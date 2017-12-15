@@ -2,28 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5713eab5-1bdb-4624-8a1a-3bd5078c216f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Preprocessing/temp.txt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Prepossing/0.1_delete_fucking_comma.py" afterPath="$PROJECT_DIR$/Preprocessing/0.1_delete_fucking_comma.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Prepossing/0.2_fill_in_necessary_comma.py" afterPath="$PROJECT_DIR$/Preprocessing/0.2_fill_in_necessary_comma.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Prepossing/1.1_raw_data_to_posts.py" afterPath="$PROJECT_DIR$/Preprocessing/1.1_raw_data_to_posts.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Prepossing/1.2_calibrate_data.py" afterPath="$PROJECT_DIR$/Preprocessing/1.2_calibrate_data.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Prepossing/1.3_normalize_data.py" afterPath="$PROJECT_DIR$/Preprocessing/1.3_normalize_data.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Prepossing/Calibrator.py" afterPath="$PROJECT_DIR$/Preprocessing/Calibrator.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Prepossing/CommaFixed.csv" afterPath="$PROJECT_DIR$/Preprocessing/CommaFixed.csv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Prepossing/Decommaed.csv" afterPath="$PROJECT_DIR$/Preprocessing/Decommaed.csv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Prepossing/Normalizer.py" afterPath="$PROJECT_DIR$/Preprocessing/Normalizer.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Prepossing/Post.py" afterPath="$PROJECT_DIR$/Preprocessing/Post.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Prepossing/PostDecoder.py" afterPath="$PROJECT_DIR$/Preprocessing/PostDecoder.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Prepossing/PostEncoder.py" afterPath="$PROJECT_DIR$/Preprocessing/PostEncoder.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Prepossing/calibrated.txt" afterPath="$PROJECT_DIR$/Preprocessing/calibrated.txt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Prepossing/go_america_to_study_data.csv" afterPath="$PROJECT_DIR$/Preprocessing/go_america_to_study_data.csv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Prepossing/go_canada_to_study_data.csv" afterPath="$PROJECT_DIR$/Preprocessing/go_canada_to_study_data.csv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Prepossing/go_english_to_study_data.csv" afterPath="$PROJECT_DIR$/Preprocessing/go_english_to_study_data.csv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Prepossing/json_data.txt" afterPath="$PROJECT_DIR$/Preprocessing/json_data.txt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Prepossing/normalized.npy" afterPath="$PROJECT_DIR$/Preprocessing/normalized.npy" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Prepossing/timesData.csv" afterPath="$PROJECT_DIR$/Preprocessing/timesData.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LoadData.py" afterPath="$PROJECT_DIR$/LoadData.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tftest.py" afterPath="$PROJECT_DIR$/tftest.py" />
     </list>
@@ -41,8 +19,8 @@
     <SUITE FILE_PATH="coverage/Ad_or_Rej$1_1_raw_data_to_posts.coverage" NAME="1.1 raw data to posts Coverage Results" MODIFIED="1513276412282" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Prepossing" />
     <SUITE FILE_PATH="coverage/Ad_or_Rej$1_3_normalize_data.coverage" NAME="1.3_normalize_data Coverage Results" MODIFIED="1513318594880" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Prepossing" />
     <SUITE FILE_PATH="coverage/Ad_or_Rej$1_2_calibrate_data.coverage" NAME="1.2_calibrate_data Coverage Results" MODIFIED="1513315760035" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Prepossing" />
-    <SUITE FILE_PATH="coverage/Ad_or_Rej$tftest.coverage" NAME="tftest Coverage Results" MODIFIED="1512587227511" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Ad_or_Rej$1_0_delete_fucking_comma.coverage" NAME="1.0 delete fucking comma Coverage Results" MODIFIED="1513196353603" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Prepossing" />
+    <SUITE FILE_PATH="coverage/Ad_or_Rej$tftest.coverage" NAME="tftest Coverage Results" MODIFIED="1513368117781" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
@@ -90,11 +68,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LoadData.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="LoadData.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/LoadData.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="9" column="39" lean-forward="true" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="39" />
+            <state relative-caret-position="216">
+              <caret line="12" column="43" lean-forward="false" selection-start-line="12" selection-start-column="43" selection-end-line="12" selection-end-column="43" />
               <folding>
                 <element signature="e#0#52#0" expanded="true" />
               </folding>
@@ -102,13 +80,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tftest.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="tftest.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tftest.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="468">
-              <caret line="26" column="57" lean-forward="false" selection-start-line="26" selection-start-column="57" selection-end-line="26" selection-end-column="57" />
+            <state relative-caret-position="441">
+              <caret line="215" column="41" lean-forward="false" selection-start-line="215" selection-start-column="41" selection-end-line="215" selection-end-column="41" />
               <folding>
-                <element signature="e#0#18#0" expanded="true" />
+                <element signature="e#0#23#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -221,8 +199,8 @@
         <option value="$PROJECT_DIR$/Prepossing/1.2_calibrate_data.py" />
         <option value="$PROJECT_DIR$/Prepossing/Normalizer.py" />
         <option value="$PROJECT_DIR$/Prepossing/1.3_normalize_data.py" />
-        <option value="$PROJECT_DIR$/tftest.py" />
         <option value="$PROJECT_DIR$/LoadData.py" />
+        <option value="$PROJECT_DIR$/tftest.py" />
       </list>
     </option>
   </component>
@@ -270,11 +248,6 @@
               <item name="Ad-or-Rej" type="462c0819:PsiDirectoryNode" />
               <item name="Preprocessing" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Ad-or-Rej" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Ad-or-Rej" type="462c0819:PsiDirectoryNode" />
-              <item name="Proposal" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -297,25 +270,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.1.3_normalize_data">
-    <configuration name="0.2 fill in necessary comma" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Prepossing" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Ad-or-Rej" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Prepossing/0.2_fill_in_necessary_comma.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-    </configuration>
+  <component name="RunManager" selected="Python.tftest">
     <configuration name="1.1 raw data to posts" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -388,20 +343,38 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
+    <configuration name="tftest" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Ad-or-Rej" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tftest.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.1.1 raw data to posts" />
-      <item index="1" class="java.lang.String" itemvalue="Python.0.2 fill in necessary comma" />
-      <item index="2" class="java.lang.String" itemvalue="Python.2.1 fix university" />
-      <item index="3" class="java.lang.String" itemvalue="Python.1.2_calibrate_data" />
-      <item index="4" class="java.lang.String" itemvalue="Python.1.3_normalize_data" />
+      <item index="1" class="java.lang.String" itemvalue="Python.2.1 fix university" />
+      <item index="2" class="java.lang.String" itemvalue="Python.1.2_calibrate_data" />
+      <item index="3" class="java.lang.String" itemvalue="Python.1.3_normalize_data" />
+      <item index="4" class="java.lang.String" itemvalue="Python.tftest" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.1.3_normalize_data" />
-        <item index="1" class="java.lang.String" itemvalue="Python.1.2_calibrate_data" />
-        <item index="2" class="java.lang.String" itemvalue="Python.2.1 fix university" />
-        <item index="3" class="java.lang.String" itemvalue="Python.1.1 raw data to posts" />
-        <item index="4" class="java.lang.String" itemvalue="Python.0.2 fill in necessary comma" />
+        <item index="0" class="java.lang.String" itemvalue="Python.tftest" />
+        <item index="1" class="java.lang.String" itemvalue="Python.1.3_normalize_data" />
+        <item index="2" class="java.lang.String" itemvalue="Python.1.2_calibrate_data" />
+        <item index="3" class="java.lang.String" itemvalue="Python.2.1 fix university" />
+        <item index="4" class="java.lang.String" itemvalue="Python.1.1 raw data to posts" />
       </list>
     </recent_temporary>
   </component>
@@ -431,7 +404,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25664622" sideWeight="0.49811524" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25664622" sideWeight="0.49811524" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -457,14 +430,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Preprocessing/calibrated.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Preprocessing/1.3_normalize_data.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="504">
@@ -701,14 +666,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="509">
-          <caret line="102" column="20" lean-forward="false" selection-start-line="102" selection-start-column="20" selection-end-line="102" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Preprocessing/0.2_fill_in_necessary_comma.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
@@ -819,22 +776,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tftest.py">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="26" column="57" lean-forward="false" selection-start-line="26" selection-start-column="57" selection-end-line="26" selection-end-column="57" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="843">
+          <caret line="102" column="20" lean-forward="false" selection-start-line="102" selection-start-column="20" selection-end-line="102" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/LoadData.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="39" lean-forward="true" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="39" />
+        <state relative-caret-position="216">
+          <caret line="12" column="43" lean-forward="false" selection-start-line="12" selection-start-column="43" selection-end-line="12" selection-end-column="43" />
           <folding>
             <element signature="e#0#52#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.local/lib/python2.7/site-packages/sklearn/naive_bayes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="707" column="0" lean-forward="false" selection-start-line="707" selection-start-column="0" selection-end-line="707" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tftest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="215" column="41" lean-forward="false" selection-start-line="215" selection-start-column="41" selection-end-line="215" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
           </folding>
         </state>
       </provider>

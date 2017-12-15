@@ -3,11 +3,11 @@ import numpy as np
 
 def load_data(data_dir):
     raw_data = np.load(data_dir)
-    label, data = np.split(raw_data, [1])
+    label, data = np.split(raw_data, [1], axis=1)
 
     return data, label
 
 def split_data(data, label, ratio=0.2):
-    X_train, X_test, y_train, y_test = train_test_split(data, label, test_size=ratio, random_state=42)
+    X_train, X_test, Y_train, Y_test = train_test_split(data, label, test_size=ratio, random_state=42)
 
-    return X_train, X_test, y_train, y_test
+    return X_train, X_test, Y_train, Y_test
