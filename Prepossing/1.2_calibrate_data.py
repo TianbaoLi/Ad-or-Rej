@@ -1,8 +1,10 @@
-import json
-import string
+from PostEncoder import *
 from PostDecoder import *
-from fuzzywuzzy import fuzz
 from Calibrator import *
+import sys
+
+reload(sys)
+sys.setdefaultencoding('utf-8')
 
 university_list = {}
 
@@ -19,6 +21,7 @@ with open('timesData.csv', 'r') as file:
         university_list[name] = rank
         index += 1
 
+json_file = open('calibrated.txt', 'w')
 with open('json_data.txt', 'r') as file:
     for line in file:
         post_dict = json.loads(line)
@@ -31,3 +34,7 @@ with open('json_data.txt', 'r') as file:
         post.toefl_total, post.toefl, post.toefl_reading, post.toefl_listening, post.toefl_speaking, post.toefl_writing = calibrate_toefl(post.toefl)
         post.gre_total, post.gre, post.gre_verbal, post.gre_quantity, post.gre_writing = calibrate_gre(post.gre)
         post.gpa, post.gpa_ranking = calibrate_gpa(post.gpa)
+
+        json_str = json.dumps(post, cls=PostEncoder, ensure_ascii=False)
+        json_file.write(json_str + '\n')
+json_file.close()
