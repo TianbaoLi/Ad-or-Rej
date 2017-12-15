@@ -1,9 +1,9 @@
 import numpy as np
 from sklearn.preprocessing import Imputer
 
-data = np.load("normalized.npy")
+raw_data = np.load("normalized.npy")
+data = raw_data
 imp = Imputer(missing_values='NaN', strategy='mean', axis=0)
-imp.fit(data)
-raw_data = imp.transform(data)
-
+imp.fit(raw_data)
+data = imp.transform(data)
 np.save('filled', data)

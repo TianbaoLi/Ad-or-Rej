@@ -23,7 +23,7 @@ with open('calibrated.txt', 'r') as file:
         post_data[9] = normalize_gre_total(post.gre_total)
         post_data[10] = normalize_gre(post.gre_verbal)
         post_data[11] = normalize_gre(post.gre_quantity)
-        post_data[12] = normalize_gre(post.gre_writing)
+        post_data[12] = normalize_gre_aw(post.gre_writing)
         post_data[13] = post.gpa
         post_data[14] = post.gpa_ranking
         #print post_data

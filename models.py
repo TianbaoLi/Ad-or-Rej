@@ -203,24 +203,24 @@ def NN(tfidf_train, train_labels, tfidf_test, test_labels):
     print('Neural network test accuracy = {}'.format((test_pred == test_labels).mean()))
 
 def main():
-    X, Y = load_data("Preprocessing/normalized.npy")
+    X, Y = load_data("Preprocessing/filled.npy")
     X_train, X_test, Y_train, Y_test = split_data(X, Y)
     #print ma.masked_outside(X_train, 0, 1)
 
     print('### MultinomialNB ###')
     mnb_model = mnb(ma.masked_outside(X_train, 0, 1), ma.masked_outside(Y_train, 0, 1), ma.masked_outside(X_test, 0, 1), ma.masked_outside(Y_test, 0, 1))
-    #print('### Logistic regression ###')
-    #logistic_model = logistic(X_train, Y_train, X_test, Y_test)
-    #print('### Stochastic gradient descent ###')
-    #SGD_model = SGD(X_train, Y_train, X_test, Y_test)
-    #print('### Support vector machine ###')
-    #SVM_model = SVM(X_train, Y_train, X_test, Y_test)
-    #print('### K nearest neighbors ###')
-    #KNN_model = KNN(X_train, Y_train, X_test, Y_test)
-    #print('### Decision tree ###')
-    #decision_tree_model = decision_tree(X_train, Y_train, X_test, Y_test)
-    #print('### Neural network ###')
-    #NN_model = NN(X_train, Y_train, X_test, Y_test)
+    print('### Logistic regression ###')
+    logistic_model = logistic(X_train, Y_train, X_test, Y_test)
+    print('### Stochastic gradient descent ###')
+    SGD_model = SGD(X_train, Y_train, X_test, Y_test)
+    print('### Support vector machine ###')
+    SVM_model = SVM(X_train, Y_train, X_test, Y_test)
+    print('### K nearest neighbors ###')
+    KNN_model = KNN(X_train, Y_train, X_test, Y_test)
+    print('### Decision tree ###')
+    decision_tree_model = decision_tree(X_train, Y_train, X_test, Y_test)
+    print('### Neural network ###')
+    NN_model = NN(X_train, Y_train, X_test, Y_test)
 
 
 if __name__ == "__main__":

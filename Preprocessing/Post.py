@@ -3,7 +3,7 @@ class Post():
     Store info for each post in the data
     '''
 
-    def __init__(self, school='', degree='', major='', result='', year=0, semester='', date='', toefl_total=0, toefl=[0,0,0,0], gre_total=0, gre=[0,0,0,0], undergraduate='', under_major='', gpa=0, gpa_ranking='', others='', url=''):
+    def __init__(self, school='', degree='', major='', result='', year=0, semester='', date='', toefl_total=0, toefl_reading = 0, toefl_listening = 0, toefl_speaking = 0, toefl_writing = 0, toefl=[0,0,0,0], gre_total=0, gre_verbal=0, gre_quantity=0, gre_writing=0, gre=[0,0,0,0], undergraduate='', under_major='', gpa=0, gpa_ranking='', others='', url=''):
         self.school = school #ranking
         self.degree = degree #1:master 2:phd
         self.major = major
@@ -12,15 +12,15 @@ class Post():
         self.semester = semester
         self.date = date
         self.toefl_total = toefl_total #total score, float
-        self.toefl_reading = 0.0
-        self.toefl_listening = 0.0
-        self.toefl_speaking = 0.0
-        self.toefl_writing = 0.0
+        self.toefl_reading = toefl_reading
+        self.toefl_listening = toefl_listening
+        self.toefl_speaking = toefl_speaking
+        self.toefl_writing = toefl_writing
         self.toefl = toefl  #list of floats, [reading listening speaking writing]
         self.gre_total = gre_total #total score, float
-        self.gre_verbal = 0.0
-        self.gre_quantity = 0.0
-        self.gre_writing = 0.0
+        self.gre_verbal = gre_verbal
+        self.gre_quantity = gre_quantity
+        self.gre_writing = gre_writing
         self.gre = gre #list of floats, [verbal quantity writing]
         self.undergraduate = undergraduate
         self.under_major = under_major
