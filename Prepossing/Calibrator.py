@@ -1,5 +1,6 @@
 import string
 from fuzzywuzzy import fuzz
+import time
 
 def calibrate_school(university_list, school):
     exclude = set(string.punctuation)
@@ -64,7 +65,7 @@ def calibrate_toefl(toefl):
 
 def calibrate_gre(gre):
     gre_total = 0.0
-    if  gre == None:
+    if gre == None:
         gre = [0, 0, 0]
     elif len(gre) == 4:
         gre_total = gre[0]
@@ -85,4 +86,45 @@ def calibrate_gre(gre):
     return gre_total, gre, gre_verbal, gre_quantity, gre_writing
 
 def calibrate_gpa(gpa):
-    print gpa
+    gpa = gpa.strip("\"")
+    gpa = gpa.strip()
+    gpa_ranking = 0.0
+    if gpa == None or len(gpa) == 0:
+        gpa = 0.0
+        return gpa, gpa_ranking
+
+    splitted = gpa.split(' ')
+    if len(splitted) == 1:
+        if gpa.find('/') != -1:
+            score, total = gpa.split('/')
+            gpa = float(score) / float(total)
+        else:
+            f_gpa = float(gpa)
+            if f_gpa <=3.9:
+                gpa = f_gpa / 4.0
+            elif f_gpa <=5:
+                gpa = f_gpa / 4.3
+            else:
+                gpa = f_gpa / 100.0
+        #print gpa, gpa_ranking
+    elif len(splitted) == 2:
+        scores = splitted[0]
+        if scores.find('/') != -1:
+            score, total = scores.split('/')
+            gpa = float(score) / float(total)
+        else:
+            f_gpa = float(scores)
+            if f_gpa <=3.9:
+                gpa = f_gpa / 4.0
+            elif f_gpa <=5:
+                gpa = f_gpa / 4.3
+            else:
+                gpa = f_gpa / 100.0
+        rank, rank_total = splitted[1].split('/')
+        gpa_ranking = float(rank) / float(rank_total)
+        #print gpa, gpa_ranking
+    else:
+        print gpa
+        print len(splitted)
+        exit(0)
+    return gpa, gpa_ranking
