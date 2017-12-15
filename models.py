@@ -1,6 +1,7 @@
 import tensorflow as tf
 import sklearn
 import numpy as np
+import numpy.ma as ma
 from sklearn.model_selection import KFold
 from sklearn.model_selection import cross_val_score
 from sklearn.datasets import fetch_20newsgroups
@@ -204,21 +205,22 @@ def NN(tfidf_train, train_labels, tfidf_test, test_labels):
 def main():
     X, Y = load_data("Preprocessing/normalized.npy")
     X_train, X_test, Y_train, Y_test = split_data(X, Y)
-    print X_train, Y_train, X_test.shape, Y_test.shape
+    #print ma.masked_outside(X_train, 0, 1)
 
-    mnb_model = mnb(X_train, Y_train, X_test, Y_test)
-    print('### Logistic regression ###')
-    #logistic_model = logistic(train_tfidf, train_data.target, test_tfidf, test_data.target)
+    print('### MultinomialNB ###')
+    mnb_model = mnb(ma.masked_outside(X_train, 0, 1), ma.masked_outside(Y_train, 0, 1), ma.masked_outside(X_test, 0, 1), ma.masked_outside(Y_test, 0, 1))
+    #print('### Logistic regression ###')
+    #logistic_model = logistic(X_train, Y_train, X_test, Y_test)
     #print('### Stochastic gradient descent ###')
-    #SGD_model = SGD(train_tfidf, train_data.target, test_tfidf, test_data.target)
+    #SGD_model = SGD(X_train, Y_train, X_test, Y_test)
     #print('### Support vector machine ###')
-    #SVM_model = SVM(train_tfidf, train_data.target, test_tfidf, test_data.target)
+    #SVM_model = SVM(X_train, Y_train, X_test, Y_test)
     #print('### K nearest neighbors ###')
-    #KNN_model = KNN(train_tfidf, train_data.target, test_tfidf, test_data.target)
+    #KNN_model = KNN(X_train, Y_train, X_test, Y_test)
     #print('### Decision tree ###')
-    #decision_tree_model = decision_tree(train_tfidf, train_data.target, test_tfidf, test_data.target)
+    #decision_tree_model = decision_tree(X_train, Y_train, X_test, Y_test)
     #print('### Neural network ###')
-    #NN_model = NN(train_tfidf, train_data.target, test_tfidf, test_data.target)
+    #NN_model = NN(X_train, Y_train, X_test, Y_test)
 
 
 if __name__ == "__main__":
