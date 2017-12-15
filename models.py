@@ -39,7 +39,7 @@ test_score = estimator.evaluate(input_fn=test_fn)
 print(test_score)
 '''
 
-def mnb(tfidf_train, train_labels, tfidf_test, test_labels):
+def mnb(train, train_labels, test, test_labels):
     # training the multinomial naive bayes model
     splits = 5
     kf = KFold(splits, shuffle = True, random_state = 0)
@@ -47,30 +47,30 @@ def mnb(tfidf_train, train_labels, tfidf_test, test_labels):
     scores = []
     for a in As:
         model = MultinomialNB(alpha = a)
-        score = cross_val_score(model, tfidf_train, train_labels, cv = kf)
+        score = cross_val_score(model, train, train_labels, cv = kf)
         scores.append(np.mean(score))
 
     opt_A_index = int(np.argmax(scores))
     opt_A = As[opt_A_index]
     print('Optimal Alpha for multinomial naive bayes = {}'.format(opt_A))
     model = MultinomialNB(alpha = opt_A)
-    model.fit(tfidf_train, train_labels)
-    train_pred = model.predict(tfidf_train)
+    model.fit(train, train_labels)
+    train_pred = model.predict(train)
     print('MultinomialNB train accuracy = {}'.format((train_pred == train_labels).mean()))
-    test_pred = model.predict(tfidf_test)
+    test_pred = model.predict(test)
     print('MultinomialNB test accuracy = {}'.format((test_pred == test_labels).mean()))
 
     return model
 
-def logistic(tfidf_train, train_labels, tfidf_test, test_labels):
+def logistic(train, train_labels, test, test_labels):
     # training the logistic regression model
     splits = 5
     kf = KFold(splits, shuffle = True, random_state = 0)
-    Cs = [0.01, 0.1, 1, 50, 100, 500, 1000, 2000]
+    Cs = [0.0001, 0.001, 0.01, 0.1, 1, 10, 100, 1000, 10000, 100000]
     scores = []
     for c in Cs:
         model = LogisticRegression(C = c)
-        score = cross_val_score(model, tfidf_train, train_labels, cv = kf)
+        score = cross_val_score(model, train, train_labels, cv = kf)
         scores.append(np.mean(score))
 
     opt_C_index = int(np.argmax(scores))
@@ -78,15 +78,15 @@ def logistic(tfidf_train, train_labels, tfidf_test, test_labels):
 
     print('Optimal C for logistic regression = {}'.format(opt_C))
     model = LogisticRegression(C = opt_C)
-    model.fit(tfidf_train, train_labels)
-    train_pred = model.predict(tfidf_train)
+    model.fit(train, train_labels)
+    train_pred = model.predict(train)
     print('Logistic regression train accuracy = {}'.format((train_pred == train_labels).mean()))
-    test_pred = model.predict(tfidf_test)
+    test_pred = model.predict(test)
     print('Logistic regression test accuracy = {}'.format((test_pred == test_labels).mean()))
 
     return model
 
-def SGD(tfidf_train, train_labels, tfidf_test, test_labels):
+def SGD(train, train_labels, test, test_labels):
     # training the stochastic gradient descent model
     splits = 5
     kf = KFold(splits, shuffle = True, random_state = 0)
@@ -94,22 +94,22 @@ def SGD(tfidf_train, train_labels, tfidf_test, test_labels):
     scores = []
     for a in As:
         model = SGDClassifier(alpha = a, max_iter = 100, tol = 1e-3, learning_rate = 'optimal')
-        score = cross_val_score(model, tfidf_train, train_labels, cv = kf)
+        score = cross_val_score(model, train, train_labels, cv = kf)
         scores.append(np.mean(score))
 
     opt_A_index = int(np.argmax(scores))
     opt_A = As[opt_A_index]
     print('Optimal Alpha for stochastic gradient descent = {}'.format(opt_A))
     model = MultinomialNB(alpha=opt_A)
-    model.fit(tfidf_train, train_labels)
-    train_pred = model.predict(tfidf_train)
+    model.fit(train, train_labels)
+    train_pred = model.predict(train)
     print('SGD train accuracy = {}'.format((train_pred == train_labels).mean()))
-    test_pred = model.predict(tfidf_test)
+    test_pred = model.predict(test)
     print('SGD test accuracy = {}'.format((test_pred == test_labels).mean()))
 
     return model
 
-def SVM(tfidf_train, train_labels, tfidf_test, test_labels):
+def SVM(train, train_labels, test, test_labels):
     # training the support vector machine model
     splits = 5
     kf = KFold(splits, shuffle = True, random_state = 0)
@@ -117,7 +117,7 @@ def SVM(tfidf_train, train_labels, tfidf_test, test_labels):
     scores = []
     for c in Cs:
         model = svm.LinearSVC(penalty = "l1", dual = False, tol = 1e-3, C = c)
-        score = cross_val_score(model, tfidf_train, train_labels, cv = kf)
+        score = cross_val_score(model, train, train_labels, cv = kf)
         scores.append(np.mean(score))
 
     opt_C_index = int(np.argmax(scores))
@@ -125,15 +125,15 @@ def SVM(tfidf_train, train_labels, tfidf_test, test_labels):
 
     print('Optimal C for support vector machine = {}'.format(opt_C))
     model = LogisticRegression(C=opt_C)
-    model.fit(tfidf_train, train_labels)
-    train_pred = model.predict(tfidf_train)
+    model.fit(train, train_labels)
+    train_pred = model.predict(train)
     print('SVM train accuracy = {}'.format((train_pred == train_labels).mean()))
-    test_pred = model.predict(tfidf_test)
+    test_pred = model.predict(test)
     print('SVM test accuracy = {}'.format((test_pred == test_labels).mean()))
 
     return model
 
-def KNN(tfidf_train, train_labels, tfidf_test, test_labels):
+def KNN(train, train_labels, test, test_labels):
     # training the K nearest neighbors model
     splits = 5
     kf = KFold(splits, shuffle = True, random_state = 0)
@@ -141,7 +141,7 @@ def KNN(tfidf_train, train_labels, tfidf_test, test_labels):
     scores = []
     for k in Ks:
         model = neighbors.KNeighborsClassifier(n_neighbors = k)
-        score = cross_val_score(model, tfidf_train, train_labels, cv = kf)
+        score = cross_val_score(model, train, train_labels, cv = kf)
         scores.append(np.mean(score))
 
     opt_K_index = int(np.argmax(scores))
@@ -149,15 +149,15 @@ def KNN(tfidf_train, train_labels, tfidf_test, test_labels):
 
     print('Optimal K for K nearest neighbors = {}'.format(opt_K))
     model = neighbors.KNeighborsClassifier(n_neighbors = opt_K)
-    model.fit(tfidf_train, train_labels)
-    train_pred = model.predict(tfidf_train)
+    model.fit(train, train_labels)
+    train_pred = model.predict(train)
     print('KNN train accuracy = {}'.format((train_pred == train_labels).mean()))
-    test_pred = model.predict(tfidf_test)
+    test_pred = model.predict(test)
     print('KNN test accuracy = {}'.format((test_pred == test_labels).mean()))
 
     return model
 
-def decision_tree(tfidf_train, train_labels, tfidf_test, test_labels):
+def decision_tree(train, train_labels, test, test_labels):
     # training the decision tree model
     splits = 5
     kf = KFold(splits, shuffle = True, random_state = 0)
@@ -165,7 +165,7 @@ def decision_tree(tfidf_train, train_labels, tfidf_test, test_labels):
     scores = []
     for d in Ds:
         model = DecisionTreeClassifier(max_depth = d)
-        score = cross_val_score(model, tfidf_train, train_labels, cv = kf)
+        score = cross_val_score(model, train, train_labels, cv = kf)
         scores.append(np.mean(score))
 
     opt_D_index = int(np.argmax(scores))
@@ -173,15 +173,15 @@ def decision_tree(tfidf_train, train_labels, tfidf_test, test_labels):
 
     print('Optimal K for decision tree = {}'.format(opt_D))
     model = DecisionTreeClassifier(max_depth = opt_D)
-    model.fit(tfidf_train, train_labels)
-    train_pred = model.predict(tfidf_train)
+    model.fit(train, train_labels)
+    train_pred = model.predict(train)
     print('Decision tree train accuracy = {}'.format((train_pred == train_labels).mean()))
-    test_pred = model.predict(tfidf_test)
+    test_pred = model.predict(test)
     print('Decision tree test accuracy = {}'.format((test_pred == test_labels).mean()))
 
     return model
 
-def NN(tfidf_train, train_labels, tfidf_test, test_labels):
+def NN(train, train_labels, test, test_labels):
     # training the neural network model
     splits = 5
     kf = KFold(splits, shuffle = True, random_state = 0)
@@ -189,22 +189,22 @@ def NN(tfidf_train, train_labels, tfidf_test, test_labels):
     scores = []
     for a in As:
         model = MLPClassifier(alpha = a, early_stopping = True)
-        score = cross_val_score(model, tfidf_train, train_labels, cv = kf)
+        score = cross_val_score(model, train, train_labels, cv = kf)
         scores.append(np.mean(score))
 
     opt_A_index = int(np.argmax(scores))
     opt_A = As[opt_A_index]
     print('Optimal Alpha for neural network = {}'.format(opt_A))
     model = MLPClassifier(alpha = opt_A, max_iter = 100, tol = 1e-3, early_stopping = True)
-    model.fit(tfidf_train, train_labels)
-    train_pred = model.predict(tfidf_train)
+    model.fit(train, train_labels)
+    train_pred = model.predict(train)
     print('Neural network train accuracy = {}'.format((train_pred == train_labels).mean()))
-    test_pred = model.predict(tfidf_test)
-    print test_pred
+    test_pred = model.predict(test)
     print('Neural network test accuracy = {}'.format((test_pred == test_labels).mean()))
 
 def main():
     X, Y = load_data("Preprocessing/filled.npy")
+    Y = Y.ravel()
     X_train, X_test, Y_train, Y_test = split_data(X, Y)
 
     print('### MultinomialNB ###')
