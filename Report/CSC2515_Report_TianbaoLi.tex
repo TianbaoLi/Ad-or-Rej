@@ -71,30 +71,32 @@
 Graduation application to the US, Canada and the UK is a hot topic for students around the world, especially in China during the past years. Admission committee always gives out a final decision according to the student's background in many perspectives. Such decision can be considered as a classification problem and there is no much work on it by now. In this project, we applied several machine learning algorithms on our self-built dataset and trained models with relatively high accuracy.
 \end{abstract}
 
-\section{Background}
+\section{Introduction}
 
-Nowadays, more and more Chinese students start to take graduate study overseas, usually in the US, Canada, the UK and somewhere else. Then, the problem just comes with it. How could they know which graduate school is the best fit, or more possibly offers admission?
+Nowadays, more and more Chinese students start to take graduate study overseas, usually in the US, Canada, the UK and somewhere else. Then, the problem just comes with it. How could they know whether a graduate school is going to offer admission or which one is the best fit?
 
 Students usually finish their graduate application in two ways. The first one is to find an agency for help. Such agencies collect application data for year and give advice based on history cases and percentage on multiple indicators. However, misjudging always happens just because graduate admission consists of complex evaluation in many areas. The second type of application is called DIY-application, finished by students themselves. Due to lack of information, many students lose better offers.
 
-During the application evaluation, information in many fields of one student is considered, including TOEFL score, GRE score, GPA, undergraduate school, work experience, research experience and other supplementary materials. Looking in the machine learning way, these indicators can be features of a certain model. We can use massive admission and rejection cases as training data to fit the admission model of a certain graduate program. Till now, ML techniques are not wildly used in this area. Comparing to human judgement and finding similar cases, many machine learning models seem to have a better prediction such as neural networks and decision tree.
+During the application evaluation, information in many fields of one student is considered, including TOEFL score, GRE score, GPA and and other supplementary materials as undergraduate school, work experience, research experience. Looking in the machine learning way, these indicators can be features of a certain model. We can use massive admission and rejection cases as training data to fit the admission model of a certain graduate program. Till now, ML techniques are not wildly used in this area. Comparing to human judgement and finding similar cases, many machine learning models seem to have a better prediction such as neural networks and decision tree.
 
-\section{TODOs}
-
-Work for this project can be divided into two main parts:
+The contribution of this project is mainly is these points:
 
 \begin{itemize}
-    \item Data collection: here I decide to use data from the BBS 1point3acres\footnote{\url{http://www.1point3acres.com/bbs/}}, the most popular graduate application BBS in China. Many Chinese students post their admission decision here. I decide to write crawler to collection data of admission and rejection.\\
-    Tools to be used: python, python-scrapy, simple NLP skills to deal with plain text description.
+    \item Dataset biult-ip: here I decide to use data from the BBS gter\footnote{\url{{red}\http://www.1point3acres.com/bbs/}}, one of the most popular graduate application BBSs in China. Many Chinese students post their admission decision here. I decide to write crawler to collection data of admission and rejection. Also due to the low data quality, much work on data cleaning has to be done. Such data can be used for related purpose in the future research\\
     \item Model training: here I decide to train several popular machine learning models on such data, including neural networks, decision tree, naive bayes, etc, find better fit model and make optimization.\\
-    Tools to be used: python, tenserflow.
 \end{itemize}
 
-\section{Clarification}
+\subsection{{red}Clarification*}
 
-This project is going to be finished by myself alone. Several wonderful papers \cite{gupta2016will} and \cite{keeley1972bayesian} could help with my project.
+This project is finished by myself alone. With a self-defined dataset, some related work may continues on it afterwards.
+
+\section{Data}
+
 
 \bibliographystyle{plain}
 \bibliography{CSC2515_Report_TianbaoLi}
 
 \end{document}
+
+
+This project is going to be finished by myself alone. Several wonderful papers \cite{gupta2016will} and \cite{keeley1972bayesian} could help with my project.
