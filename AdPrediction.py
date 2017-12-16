@@ -113,7 +113,7 @@ def SVM(train, train_labels, test, test_labels):
     # training the support vector machine model
     splits = 5
     kf = KFold(splits, shuffle = True, random_state = 0)
-    Cs = [0.1, 1, 5, 10, 100, 1000]
+    Cs = [1, 10, 100, 1000, 10000, 100000, 1000000]
     scores = []
     for c in Cs:
         model = svm.LinearSVC(penalty = "l1", dual = False, tol = 1e-3, C = c)
@@ -185,7 +185,7 @@ def NN(train, train_labels, test, test_labels):
     # training the neural network model
     splits = 5
     kf = KFold(splits, shuffle = True, random_state = 0)
-    As = [1e-8, 1e-6, 1e-4, 0.01, 0.1, 1, 10]
+    As = [1e-12, 1e-10, 1e-8, 1e-6, 1e-4, 0.01, 0.1, 1, 10]
     scores = []
     for a in As:
         model = MLPClassifier(alpha = a, early_stopping = True)
