@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5713eab5-1bdb-4624-8a1a-3bd5078c216f" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/models.py" afterPath="$PROJECT_DIR$/AdPrediction.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -14,12 +13,14 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/Ad_or_Rej$0_2_fill_in_necessary_comma.coverage" NAME="0.2 fill in necessary comma Coverage Results" MODIFIED="1513222875714" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Prepossing" />
+    <SUITE FILE_PATH="coverage/Ad_or_Rej$DataSummary.coverage" NAME="DataSummary Coverage Results" MODIFIED="1513452368692" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Ad_or_Rej$2_1_fix_university.coverage" NAME="2.1 fix university Coverage Results" MODIFIED="1513283339531" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Prepossing" />
     <SUITE FILE_PATH="coverage/Ad_or_Rej$data_process.coverage" NAME="data_process Coverage Results" MODIFIED="1513137521799" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Prepossing" />
+    <SUITE FILE_PATH="coverage/Ad_or_Rej$AdPrediction.coverage" NAME="AdPrediction Coverage Results" MODIFIED="1513450411328" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Ad_or_Rej$1_1_raw_data_to_posts.coverage" NAME="1.1 raw data to posts Coverage Results" MODIFIED="1513276412282" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Prepossing" />
-    <SUITE FILE_PATH="coverage/Ad_or_Rej$1_3_normalize_data.coverage" NAME="1.3_normalize_data Coverage Results" MODIFIED="1513376577441" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Preprocessing" />
+    <SUITE FILE_PATH="coverage/Ad_or_Rej$1_3_normalize_data.coverage" NAME="1.3_normalize_data Coverage Results" MODIFIED="1513450722999" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Preprocessing" />
     <SUITE FILE_PATH="coverage/Ad_or_Rej$1_2_calibrate_data.coverage" NAME="1.2_calibrate_data Coverage Results" MODIFIED="1513315760035" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Prepossing" />
-    <SUITE FILE_PATH="coverage/Ad_or_Rej$2_1_fill_missing.coverage" NAME="2.1_fill_missing Coverage Results" MODIFIED="1513376581906" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Preprocessing" />
+    <SUITE FILE_PATH="coverage/Ad_or_Rej$2_1_fill_missing.coverage" NAME="2.1_fill_missing Coverage Results" MODIFIED="1513450798829" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Preprocessing" />
     <SUITE FILE_PATH="coverage/Ad_or_Rej$1_0_delete_fucking_comma.coverage" NAME="1.0 delete fucking comma Coverage Results" MODIFIED="1513196353603" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Prepossing" />
     <SUITE FILE_PATH="coverage/Ad_or_Rej$tftest.coverage" NAME="models Coverage Results" MODIFIED="1513391960153" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
@@ -35,55 +36,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="calibrated.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Preprocessing/calibrated.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="6" column="360" lean-forward="false" selection-start-line="6" selection-start-column="353" selection-end-line="6" selection-end-column="360" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="1.2_calibrate_data.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Preprocessing/1.2_calibrate_data.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="549">
-              <caret line="38" column="40" lean-forward="false" selection-start-line="38" selection-start-column="8" selection-end-line="38" selection-end-column="40" />
-              <folding>
-                <element signature="e#0#25#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="1.3_normalize_data.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Preprocessing/1.3_normalize_data.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="558">
-              <caret line="31" column="27" lean-forward="false" selection-start-line="31" selection-start-column="27" selection-end-line="31" selection-end-column="27" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Normalizer.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Preprocessing/Normalizer.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="24" column="35" lean-forward="false" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="2.1_fill_missing.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Preprocessing/2.1_fill_missing.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+            <state relative-caret-position="504">
+              <caret line="28" column="9" lean-forward="false" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -94,8 +51,8 @@
       <file leaf-file-name="LoadData.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/LoadData.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+            <state relative-caret-position="288">
+              <caret line="16" column="49" lean-forward="true" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="49" />
               <folding>
                 <element signature="e#0#52#0" expanded="true" />
               </folding>
@@ -103,14 +60,44 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AdPrediction.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AdPrediction.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AdPrediction.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="227" column="0" lean-forward="false" selection-start-line="227" selection-start-column="0" selection-end-line="227" selection-end-column="0" />
+            <state relative-caret-position="532">
+              <caret line="211" column="40" lean-forward="true" selection-start-line="211" selection-start-column="40" selection-end-line="211" selection-end-column="40" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Normalizer.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Preprocessing/Normalizer.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="14" column="33" lean-forward="true" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DataSummary.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DataSummary.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="504">
+              <caret line="28" column="24" lean-forward="false" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="timesData.csv" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Preprocessing/timesData.csv">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="14" column="14" lean-forward="false" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -226,11 +213,12 @@
         <option value="$PROJECT_DIR$/Preprocessing/1.2_fill_missing.py" />
         <option value="$PROJECT_DIR$/Preprocessing/Post.py" />
         <option value="$PROJECT_DIR$/Preprocessing/PostDecoder.py" />
-        <option value="$PROJECT_DIR$/Preprocessing/1.3_normalize_data.py" />
-        <option value="$PROJECT_DIR$/Preprocessing/2.1_fill_missing.py" />
-        <option value="$PROJECT_DIR$/LoadData.py" />
         <option value="$PROJECT_DIR$/Preprocessing/Normalizer.py" />
         <option value="$PROJECT_DIR$/models.py" />
+        <option value="$PROJECT_DIR$/LoadData.py" />
+        <option value="$PROJECT_DIR$/Preprocessing/1.3_normalize_data.py" />
+        <option value="$PROJECT_DIR$/Preprocessing/2.1_fill_missing.py" />
+        <option value="$PROJECT_DIR$/DataSummary.py" />
       </list>
     </option>
   </component>
@@ -264,8 +252,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -282,6 +268,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -301,7 +289,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.models">
+  <component name="RunManager" selected="Python.DataSummary">
     <configuration name="1.2_calibrate_data" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -356,7 +344,7 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="models" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="AdPrediction" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -374,18 +362,38 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <list size="4">
+    <configuration name="DataSummary" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Ad-or-Rej" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DataSummary.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
+    <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.1.2_calibrate_data" />
       <item index="1" class="java.lang.String" itemvalue="Python.1.3_normalize_data" />
-      <item index="2" class="java.lang.String" itemvalue="Python.models" />
-      <item index="3" class="java.lang.String" itemvalue="Python.2.1_fill_missing" />
+      <item index="2" class="java.lang.String" itemvalue="Python.2.1_fill_missing" />
+      <item index="3" class="java.lang.String" itemvalue="Python.DataSummary" />
+      <item index="4" class="java.lang.String" itemvalue="Python.AdPrediction" />
     </list>
     <recent_temporary>
-      <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="Python.models" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Python.DataSummary" />
         <item index="1" class="java.lang.String" itemvalue="Python.2.1_fill_missing" />
         <item index="2" class="java.lang.String" itemvalue="Python.1.3_normalize_data" />
-        <item index="3" class="java.lang.String" itemvalue="Python.1.2_calibrate_data" />
+        <item index="3" class="java.lang.String" itemvalue="Python.AdPrediction" />
+        <item index="4" class="java.lang.String" itemvalue="Python.1.2_calibrate_data" />
       </list>
     </recent_temporary>
   </component>
@@ -406,7 +414,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="63" y="-4" width="1857" height="1084" extended-state="6" />
+    <frame x="63" y="-4" width="1859" height="1092" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1448573" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -415,7 +423,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25664622" sideWeight="0.49811524" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25664622" sideWeight="0.49811524" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -441,14 +449,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Preprocessing/timesData.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3942">
-          <caret line="219" column="26" lean-forward="false" selection-start-line="219" selection-start-column="8" selection-end-line="219" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Preprocessing/Normalizer.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
@@ -490,7 +490,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
           <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -541,7 +540,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
           <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -571,7 +569,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
           <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -671,7 +668,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
           <caret line="2" column="36" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -700,9 +696,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
           <caret line="4" column="46" lean-forward="true" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="46" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -710,15 +703,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-660579">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Preprocessing/timesData.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="219" column="26" lean-forward="false" selection-start-line="219" selection-start-column="8" selection-end-line="219" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -726,7 +710,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="843">
           <caret line="102" column="20" lean-forward="false" selection-start-line="102" selection-start-column="20" selection-end-line="102" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -742,7 +725,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
           <caret line="2" column="36" lean-forward="true" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
-          <folding />
+          <folding>
+            <element signature="e#0#18#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -762,27 +747,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Preprocessing/2.1_fill_missing.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Preprocessing/Normalizer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="24" column="35" lean-forward="false" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Preprocessing/calibrated.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
+        <state relative-caret-position="18">
           <caret line="6" column="360" lean-forward="false" selection-start-line="6" selection-start-column="353" selection-end-line="6" selection-end-column="360" />
           <folding />
         </state>
@@ -798,20 +765,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Preprocessing/1.3_normalize_data.py">
+    <entry file="file://$PROJECT_DIR$/Preprocessing/2.1_fill_missing.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="558">
-          <caret line="31" column="27" lean-forward="false" selection-start-line="31" selection-start-column="27" selection-end-line="31" selection-end-column="27" />
+        <state relative-caret-position="126">
+          <caret line="7" column="26" lean-forward="true" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
           <folding>
-            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#0#18#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Preprocessing/timesData.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" column="14" lean-forward="false" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataSummary.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="28" column="24" lean-forward="false" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/LoadData.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        <state relative-caret-position="288">
+          <caret line="16" column="49" lean-forward="true" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="49" />
           <folding>
             <element signature="e#0#52#0" expanded="true" />
           </folding>
@@ -820,11 +803,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/AdPrediction.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="227" column="0" lean-forward="false" selection-start-line="227" selection-start-column="0" selection-end-line="227" selection-end-column="0" />
+        <state relative-caret-position="532">
+          <caret line="211" column="40" lean-forward="true" selection-start-line="211" selection-start-column="40" selection-end-line="211" selection-end-column="40" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Preprocessing/1.3_normalize_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="28" column="9" lean-forward="false" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Preprocessing/Normalizer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" column="33" lean-forward="true" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
+          <folding />
         </state>
       </provider>
     </entry>
