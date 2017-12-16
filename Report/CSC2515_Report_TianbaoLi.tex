@@ -1,0 +1,105 @@
+\documentclass{article}
+
+% if you need to pass options to natbib, use, e.g.:
+% \PassOptionsToPackage{numbers, compress}{natbib}
+% before loading nips_2017
+%
+% to avoid loading the natbib package, add option nonatbib:
+% \usepackage[nonatbib]{nips_2017}
+
+\usepackage[final]{nips_2017}
+
+% to compile a camera-ready version, add the [final] option, e.g.:
+%\usepackage[final]{nips_2017}
+
+\usepackage[utf8]{inputenc} % allow utf-8 input
+\usepackage[T1]{fontenc}    % use 8-bit T1 fonts
+\usepackage{hyperref}       % hyperlinks
+\usepackage{url}            % simple URL typesetting
+\usepackage{booktabs}       % professional-quality tables
+\usepackage{amsfonts}       % blackboard math symbols
+\usepackage{nicefrac}       % compact symbols for 1/2, etc.
+\usepackage{microtype}      % microtypography
+
+\title{Machine Learning Based Graduate Admission Prediction}
+
+% The \author macro works with any number of authors. There are two
+% commands used to separate the names and addresses of multiple
+% authors: \And and \AND.
+%
+% Using \And between authors leaves it to LaTeX to determine where to
+% break the lines. Using \AND forces a line break at that point. So,
+% if LaTeX puts 3 of 4 authors names on the first line, and the last
+% on the second line, try using \AND instead of \And before the third
+% author name.
+
+\author{
+  Tianbao Li\\
+  Department of Computer Science\\
+  University of Toronto\\
+  Toronto, Ontario M5S 2E4\\
+  \texttt{tianbao@cs.toronto.edu} \\
+  %% examples of more authors
+  %% \And
+  %% Coauthor \\
+  %% Affiliation \\
+  %% Address \\
+  %% \texttt{email} \\
+  %% \AND
+  %% Coauthor \\
+  %% Affiliation \\
+  %% Address \\
+  %% \texttt{email} \\
+  %% \And
+  %% Coauthor \\
+  %% Affiliation \\
+  %% Address \\
+  %% \texttt{email} \\
+  %% \And
+  %% Coauthor \\
+  %% Affiliation \\
+  %% Address \\
+  %% \texttt{email} \\
+}
+
+\begin{document}
+% \nipsfinalcopy is no longer used
+
+\maketitle
+
+%\begin{abstract}
+%  The abstract paragraph should be indented \nicefrac{1}{2}~inch
+%  (3~picas) on both the left- and right-hand margins. Use 10~point
+%  type, with a vertical spacing (leading) of 11~points.  The word
+%  \textbf{Abstract} must be centered, bold, and in point size 12. Two
+%  line spaces precede the abstract. The abstract must be limited to
+%  one paragraph.
+%\end{abstract}
+
+\section{Background}
+
+Nowadays, more and more Chinese students start to take graduate study overseas, usually in the US, Canada, the UK and somewhere else. Then, the problem just comes with it. How could they know which graduate school is the best fit, or more possibly offers admission?
+
+Students usually finish their graduate application in two ways. The first one is to find an agency for help. Such agencies collect application data for year and give advice based on history cases and percentage on multiple indicators. However, misjudging always happens just because graduate admission consists of complex evaluation in many areas. The second type of application is called DIY-application, finished by students themselves. Due to lack of information, many students lose better offers.
+
+During the application evaluation, information in many fields of one student is considered, including TOEFL score, GRE score, GPA, undergraduate school, work experience, research experience and other supplementary materials. Looking in the machine learning way, these indicators can be features of a certain model. We can use massive admission and rejection cases as training data to fit the admission model of a certain graduate program. Till now, ML techniques are not wildly used in this area. Comparing to human judgement and finding similar cases, many machine learning models seem to have a better prediction such as neural networks and decision tree.
+
+\section{TODOs}
+
+Work for this project can be divided into two main parts:
+
+\begin{itemize}
+    \item Data collection: here I decide to use data from the BBS 1point3acres\footnote{\url{http://www.1point3acres.com/bbs/}}, the most popular graduate application BBS in China. Many Chinese students post their admission decision here. I decide to write crawler to collection data of admission and rejection.\\
+    Tools to be used: python, python-scrapy, simple NLP skills to deal with plain text description.
+    \item Model training: here I decide to train several popular machine learning models on such data, including neural networks, decision tree, naive bayes, etc, find better fit model and make optimization.\\
+    Tools to be used: python, tenserflow.
+\end{itemize}
+
+\section{Clarification}
+
+This project is going to be finished by myself alone. Several wonderful papers \cite{gupta2016will} and \cite{keeley1972bayesian} could help with my project.
+
+\bibliographystyle{plain}
+\bibliography{CSC2515_Report_TianbaoLi}
+
+\end{document}
