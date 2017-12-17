@@ -1,3 +1,38 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{1}
+
+\bibitem{alzahranigot}
+Maha Alzahrani.
+\newblock {\em " I Got Accepted": Perceptions of Saudi Graduate Students on
+  Factors influencing their Application Experience}.
+\newblock PhD thesis.
+
+\bibitem{bruggink1996statistical}
+Thomas~H Bruggink and Vivek Gambhir.
+\newblock Statistical models for college admission and enrollment: A case study
+  for a selective liberal arts college.
+\newblock {\em Research in Higher Education}, 37(2):221--240, 1996.
+
+\bibitem{gupta2016will}
+Narender Gupta, Aman Sawhney, and Dan Roth.
+\newblock Will i get in? modeling the graduate admission process for american
+  universities.
+\newblock In {\em Data Mining Workshops (ICDMW), 2016 IEEE 16th International
+  Conference on}, pages 631--638. IEEE, 2016.
+
+\bibitem{moore1998expert}
+James~S Moore.
+\newblock An expert system approach to graduate school admission decisions and
+  academic performance prediction.
+\newblock {\em Omega}, 26(5):659--670, 1998.
+
+\bibitem{raghunathan2010demystifying}
+Karthik Raghunathan.
+\newblock Demystifying the american graduate admissions process.
+\newblock {\em StudyMode. com}, 2010.
+
+\bibitem{waters2014grade}
+Austin Waters and Risto Miikkulainen.
+\newblock Grade: machine learning support for graduate admissions.
+\newblock {\em AI Magazine}, 35(1):64, 2014.
 
 \end{thebibliography}
