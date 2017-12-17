@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5713eab5-1bdb-4624-8a1a-3bd5078c216f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Report/CSC2515_Report_TianbaoLi.pdf" afterPath="$PROJECT_DIR$/Report/CSC2515_Report_TianbaoLi.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Report/CSC2515_Report_TianbaoLi.synctex.gz" afterPath="$PROJECT_DIR$/Report/CSC2515_Report_TianbaoLi.synctex.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Report/CSC2515_Report_TianbaoLi.aux" afterPath="$PROJECT_DIR$/Report/CSC2515_Report_TianbaoLi.aux" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Report/CSC2515_Report_TianbaoLi.bbl" afterPath="$PROJECT_DIR$/Report/CSC2515_Report_TianbaoLi.bbl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Report/CSC2515_Report_TianbaoLi.bib" afterPath="$PROJECT_DIR$/Report/CSC2515_Report_TianbaoLi.bib" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Report/CSC2515_Report_TianbaoLi.blg" afterPath="$PROJECT_DIR$/Report/CSC2515_Report_TianbaoLi.blg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Report/CSC2515_Report_TianbaoLi.fdb_latexmk" afterPath="$PROJECT_DIR$/Report/CSC2515_Report_TianbaoLi.fdb_latexmk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Report/CSC2515_Report_TianbaoLi.fls" afterPath="$PROJECT_DIR$/Report/CSC2515_Report_TianbaoLi.fls" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Report/CSC2515_Report_TianbaoLi.tex" afterPath="$PROJECT_DIR$/Report/CSC2515_Report_TianbaoLi.tex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AdPrediction.py" afterPath="$PROJECT_DIR$/AdPrediction.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,10 +13,10 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/Ad_or_Rej$0_2_fill_in_necessary_comma.coverage" NAME="0.2 fill in necessary comma Coverage Results" MODIFIED="1513222875714" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Prepossing" />
-    <SUITE FILE_PATH="coverage/Ad_or_Rej$DataSummary.coverage" NAME="DataSummary Coverage Results" MODIFIED="1513452368692" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Ad_or_Rej$DataSummary.coverage" NAME="DataSummary Coverage Results" MODIFIED="1513496591251" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Ad_or_Rej$2_1_fix_university.coverage" NAME="2.1 fix university Coverage Results" MODIFIED="1513283339531" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Prepossing" />
     <SUITE FILE_PATH="coverage/Ad_or_Rej$data_process.coverage" NAME="data_process Coverage Results" MODIFIED="1513137521799" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Prepossing" />
-    <SUITE FILE_PATH="coverage/Ad_or_Rej$AdPrediction.coverage" NAME="AdPrediction Coverage Results" MODIFIED="1513450411328" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Ad_or_Rej$AdPrediction.coverage" NAME="AdPrediction Coverage Results" MODIFIED="1513496671705" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Ad_or_Rej$1_1_raw_data_to_posts.coverage" NAME="1.1 raw data to posts Coverage Results" MODIFIED="1513276412282" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Prepossing" />
     <SUITE FILE_PATH="coverage/Ad_or_Rej$1_3_normalize_data.coverage" NAME="1.3_normalize_data Coverage Results" MODIFIED="1513450722999" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Preprocessing" />
     <SUITE FILE_PATH="coverage/Ad_or_Rej$1_2_calibrate_data.coverage" NAME="1.2_calibrate_data Coverage Results" MODIFIED="1513315760035" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Prepossing" />
@@ -45,7 +36,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="1.3_normalize_data.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="1.3_normalize_data.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Preprocessing/1.3_normalize_data.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="504">
@@ -81,11 +72,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AdPrediction.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="AdPrediction.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/AdPrediction.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="532">
-              <caret line="211" column="40" lean-forward="false" selection-start-line="211" selection-start-column="40" selection-end-line="211" selection-end-column="40" />
+            <state relative-caret-position="508">
+              <caret line="188" column="24" lean-forward="false" selection-start-line="188" selection-start-column="24" selection-end-line="188" selection-end-column="24" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
               </folding>
@@ -240,6 +231,7 @@
         <option value="$PROJECT_DIR$/Preprocessing/1.3_normalize_data.py" />
         <option value="$PROJECT_DIR$/Preprocessing/2.1_fill_missing.py" />
         <option value="$PROJECT_DIR$/DataSummary.py" />
+        <option value="$PROJECT_DIR$/AdPrediction.py" />
       </list>
     </option>
   </component>
@@ -310,7 +302,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.DataSummary">
+  <component name="RunManager" selected="Python.AdPrediction">
     <configuration name="1.2_calibrate_data" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -410,10 +402,10 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.DataSummary" />
-        <item index="1" class="java.lang.String" itemvalue="Python.2.1_fill_missing" />
-        <item index="2" class="java.lang.String" itemvalue="Python.1.3_normalize_data" />
-        <item index="3" class="java.lang.String" itemvalue="Python.AdPrediction" />
+        <item index="0" class="java.lang.String" itemvalue="Python.AdPrediction" />
+        <item index="1" class="java.lang.String" itemvalue="Python.DataSummary" />
+        <item index="2" class="java.lang.String" itemvalue="Python.2.1_fill_missing" />
+        <item index="3" class="java.lang.String" itemvalue="Python.1.3_normalize_data" />
         <item index="4" class="java.lang.String" itemvalue="Python.1.2_calibrate_data" />
       </list>
     </recent_temporary>
@@ -444,7 +436,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25664622" sideWeight="0.49811524" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37730062" sideWeight="0.49811524" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -779,16 +771,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AdPrediction.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="211" column="40" lean-forward="false" selection-start-line="211" selection-start-column="40" selection-end-line="211" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Preprocessing/1.2_calibrate_data.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="574">
@@ -849,6 +831,16 @@
           <caret line="28" column="9" lean-forward="false" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AdPrediction.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="508">
+          <caret line="188" column="24" lean-forward="false" selection-start-line="188" selection-start-column="24" selection-end-line="188" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
           </folding>
         </state>
       </provider>

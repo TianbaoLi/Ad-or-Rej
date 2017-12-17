@@ -14,6 +14,7 @@ from sklearn.linear_model import SGDClassifier
 from sklearn import svm
 from sklearn import neighbors
 from sklearn.tree import DecisionTreeClassifier
+from sklearn.ensemble import RandomForestClassifier
 from sklearn.neural_network import MLPClassifier
 
 from LoadData import *
@@ -181,6 +182,28 @@ def decision_tree(train, train_labels, test, test_labels):
 
     return model
 
+def random_forest(train, train_labels, test, test_labels):
+    # training the random forest model
+    splits = 5
+    kf = KFold(splits, shuffle = True, random_state = 0)
+    Ns = range(1, 201, 20)
+    scores = []
+    for n in Ns:
+        model = DecisionTreeClassifier(max_depth = n)
+        score = cross_val_score(model, train, train_labels, cv = kf)
+        scores.append(np.mean(score))
+
+    opt_N_index = int(np.argmax(scores))
+    opt_N = Ns[opt_N_index]
+
+    print('Optimal N for random forest = {}'.format(opt_N))
+    model = DecisionTreeClassifier(max_depth = opt_N)
+    model.fit(train, train_labels)
+    train_pred = model.predict(train)
+    print('Random forest train accuracy = {}'.format((train_pred == train_labels).mean()))
+    test_pred = model.predict(test)
+    print('Random forest test accuracy = {}'.format((test_pred == test_labels).mean()))
+
 def NN(train, train_labels, test, test_labels):
     # training the neural network model
     splits = 5
@@ -219,6 +242,8 @@ def main():
     KNN_model = KNN(X_train, Y_train, X_test, Y_test)
     print('### Decision tree ###')
     decision_tree_model = decision_tree(X_train, Y_train, X_test, Y_test)
+    print('### Random forest ###')
+    random_forest_model = random_forest(X_train, Y_train, X_test, Y_test)
     print('### Neural network ###')
     NN_model = NN(X_train, Y_train, X_test, Y_test)
 
