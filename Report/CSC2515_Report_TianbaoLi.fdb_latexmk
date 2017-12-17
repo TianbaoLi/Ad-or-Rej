@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex CSC2515_Report_TianbaoLi"] 1513448401 "CSC2515_Report_TianbaoLi.aux" "CSC2515_Report_TianbaoLi.bbl" "CSC2515_Report_TianbaoLi" 1513448404
+["bibtex CSC2515_Report_TianbaoLi"] 1513493212 "CSC2515_Report_TianbaoLi.aux" "CSC2515_Report_TianbaoLi.bbl" "CSC2515_Report_TianbaoLi" 1513494156
   "/usr/local/texlive/2017/texmf-dist/bibtex/bst/base/plain.bst" 1480098433 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "CSC2515_Report_TianbaoLi.aux" 1513448401 978 e24d054fb7cc14096e82257b3530a6cf ""
+  "CSC2515_Report_TianbaoLi.aux" 1513494156 1043 f2071ecacde1a339af3543a81e78e94c ""
   "CSC2515_Report_TianbaoLi.bib" 1509759688 631 5b02ab15f38033008cd0dbebf21f580b ""
   (generated)
-  "CSC2515_Report_TianbaoLi.bbl"
   "CSC2515_Report_TianbaoLi.blg"
-["pdflatex"] 1513448401 "CSC2515_Report_TianbaoLi.tex" "CSC2515_Report_TianbaoLi.pdf" "CSC2515_Report_TianbaoLi" 1513448404
+  "CSC2515_Report_TianbaoLi.bbl"
+["pdflatex"] 1513494156 "CSC2515_Report_TianbaoLi.tex" "CSC2515_Report_TianbaoLi.pdf" "CSC2515_Report_TianbaoLi" 1513494156
   "/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc" 1480098666 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1480098666 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2017/texmf-dist/fonts/map/fontname/texfonts.map" 1480098670 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
@@ -85,13 +85,13 @@
   "/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1506351677 2413399 a34414952447e5770f00490a7226a53e ""
   "/usr/local/texlive/2017/texmf-var/web2c/pdftex/pdflatex.fmt" 1506351701 4130359 98a892baff85034bca352bb12374bc17 ""
   "/usr/local/texlive/2017/texmf.cnf" 1506351666 455 5b996dcaa0eb4ef14a83b026bc0a008c ""
-  "CSC2515_Report_TianbaoLi.aux" 1513448401 978 e24d054fb7cc14096e82257b3530a6cf ""
-  "CSC2515_Report_TianbaoLi.bbl" 1513448401 49 0eba253fc001332e731e8aba3f23127b "bibtex CSC2515_Report_TianbaoLi"
-  "CSC2515_Report_TianbaoLi.out" 1513448401 152 caf1b219be7bb8dff213861577d70f61 ""
-  "CSC2515_Report_TianbaoLi.tex" 1513448403 5180 6235f6cedc454e32a4dd9b779e744163 ""
+  "CSC2515_Report_TianbaoLi.aux" 1513494156 1043 f2071ecacde1a339af3543a81e78e94c ""
+  "CSC2515_Report_TianbaoLi.bbl" 1513493212 49 0eba253fc001332e731e8aba3f23127b "bibtex CSC2515_Report_TianbaoLi"
+  "CSC2515_Report_TianbaoLi.out" 1513494156 94 30a9ed8803206f4e6c84f6424e6fe829 ""
+  "CSC2515_Report_TianbaoLi.tex" 1513494156 6763 80a49f2b46923e5b82b643e743bf997e ""
   "nips_2017.sty" 1509462197 10348 6710e28db6fbb0acfa35d4ff6a09d8ef ""
   (generated)
-  "CSC2515_Report_TianbaoLi.log"
   "CSC2515_Report_TianbaoLi.pdf"
-  "CSC2515_Report_TianbaoLi.out"
   "CSC2515_Report_TianbaoLi.aux"
+  "CSC2515_Report_TianbaoLi.out"
+  "CSC2515_Report_TianbaoLi.log"
