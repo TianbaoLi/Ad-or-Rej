@@ -204,6 +204,31 @@ def random_forest(train, train_labels, test, test_labels):
     test_pred = model.predict(test)
     print('Random forest test accuracy = {}'.format((test_pred == test_labels).mean()))
 
+def combined_KNN_DCT(KNN_model, decision_tree_model, train, train_labels, test, test_labels):
+    X_val, X_test, Y_val, Y_test = train_test_split(test, test_labels, test_size=0.5, random_state=42)
+    train_pred_KNN = KNN_model.predict(X_val)
+    train_pred_dct = decision_tree_model.predict(X_val)
+    As = [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1]
+    Bs = As
+    max_score = 0
+    max_a = 0
+    max_b = 0
+    for a in As:
+        for b in Bs:
+            train_pred = a * train_pred_KNN + (1 - a) * train_pred_dct
+            train_pred = (train_pred > b).astype(int)
+            score = (train_pred == Y_val).mean()
+            if score > max_score:
+                max_score = score
+                max_a = a
+                max_b = b
+    test_pred_KNN = KNN_model.predict(test)
+    test_pred_dct = decision_tree_model.predict(test)
+    test_pred = max_a * test_pred_KNN + (1 - max_a) * test_pred_dct
+    test_pred = (test_pred > max_b).astype(int)
+
+    print('Combined test accuracy = {}'.format((test_pred == test_labels).mean()))
+
 def NN(train, train_labels, test, test_labels):
     # training the neural network model
     splits = 5
@@ -230,23 +255,24 @@ def main():
     Y = Y.ravel()
     X_train, X_test, Y_train, Y_test = split_data(X, Y)
 
-    print('### MultinomialNB ###')
-    mnb_model = mnb(ma.masked_outside(X_train, 0, 1), ma.masked_outside(Y_train, 0, 1), ma.masked_outside(X_test, 0, 1), ma.masked_outside(Y_test, 0, 1))
-    print('### Logistic regression ###')
-    logistic_model = logistic(X_train, Y_train, X_test, Y_test)
-    print('### Stochastic gradient descent ###')
-    SGD_model = SGD(X_train, Y_train, X_test, Y_test)
-    print('### Support vector machine ###')
-    SVM_model = SVM(X_train, Y_train, X_test, Y_test)
+    #print('### MultinomialNB ###')
+    #mnb_model = mnb(ma.masked_outside(X_train, 0, 1), ma.masked_outside(Y_train, 0, 1), ma.masked_outside(X_test, 0, 1), ma.masked_outside(Y_test, 0, 1))
+    #print('### Logistic regression ###')
+    #logistic_model = logistic(X_train, Y_train, X_test, Y_test)
+    #print('### Stochastic gradient descent ###')
+    #SGD_model = SGD(X_train, Y_train, X_test, Y_test)
+    #print('### Support vector machine ###')
+    #SVM_model = SVM(X_train, Y_train, X_test, Y_test)
     print('### K nearest neighbors ###')
     KNN_model = KNN(X_train, Y_train, X_test, Y_test)
     print('### Decision tree ###')
     decision_tree_model = decision_tree(X_train, Y_train, X_test, Y_test)
-    print('### Random forest ###')
-    random_forest_model = random_forest(X_train, Y_train, X_test, Y_test)
-    print('### Neural network ###')
-    NN_model = NN(X_train, Y_train, X_test, Y_test)
-
+    #print('### Random forest ###')
+    #random_forest_model = random_forest(X_train, Y_train, X_test, Y_test)
+    #print('### Neural network ###')
+    #NN_model = NN(X_train, Y_train, X_test, Y_test)
+    print('### Combines K nearest neighbors & Decision Tree###')
+    combined_KNN_DCT(KNN_model, decision_tree_model, X_train, Y_train, X_test, Y_test)
 
 if __name__ == "__main__":
     main()
