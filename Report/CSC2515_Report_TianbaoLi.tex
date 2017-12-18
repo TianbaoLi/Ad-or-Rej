@@ -156,7 +156,7 @@ $$
 min_{w,c}\frac{1}{2}w^\mathrm{T}w+C\sum_{i=1}^n\log(\exp(-y_i(X_i^\mathrm{T}w+c))+1)
 $$
 
-For implementation, we use LogisticRegression\footnote{\url{http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html}} from scikit-learn. In this model, hype-perameters such as penalty (l1 or l2), C (inverse regularization strength), tol (tolerance for stopping criteria) and some others can be changed.
+For implementation, we use LogisticRegression\footnote{\url{http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html}} from scikit-learn. In this model, hyper-perameters such as penalty (l1 or l2), C (inverse regularization strength), tol (tolerance for stopping criteria) and some others can be changed.
 
 \subsection{SVM}
 
@@ -168,22 +168,35 @@ LinearSVC\footnote{\url{http://scikit-learn.org/stable/modules/generated/sklearn
 
 Distance-based K Nearest Neighbors is one suitable model for our problem. The first thought is that admitted cases hold the similar value on features, which means they are near in the feature space. It just fits the idea of nearest neighbors and it tends to work well.
 
-For KNN, we use KNeighborsClassifier\foornote{\url{http://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html}} from scikit-learn as the model. Then we try to justify the parameter K (amount of neighbors) to have a higher accuracy.
+For KNN, we use KNeighborsClassifier\footnote{\url{http://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html}} from scikit-learn as the model. Then we try to justify the hyper-parameter K (amount of neighbors) to have a higher accuracy.
 
 \subsection{Decision Tree}
 
-\subsection{Random Forest}
+During the human admission process, it is usually divided into several decision rules, such as if the GPA high enough or if English using hits the criteria. Such process is similar to the decision tree classification. Also, the representative capability increases with the tree comes deeper.
+
+In scikit-learn, DecisionTreeClassifier\footnote{\url{http://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html}} can be used in this problem. For the hyper-parameter max\_depth, it could overfit when larger and underfit when smaller. So the parameter adjustment can be applied on this.
+
+Futuremore, researchers usually use decision trees with much randomness, that is random forest. Comprised of several different decision trees, it often has better usually results on complex problem.
 
 \subsection{Neural Networks}
 
+As the most popular model, neural networks is solving quite different problems, linear or non-linear, simple or complex... Our project also play a easy try on this. MLPClassifier\footnote{\url{http://scikit-learn.org/stable/modules/generated/sklearn.neural_network.MLPClassifier.html}} is a non-GPU version implementation for small-scale application. Hyper-parameters of hidden layer sizes, activation functions are L2 penalty (regularization term) parameter are adjusting to achieve better.
+
 \subsection{Combination of KNN and Decision Tree}
 
+Following the discussion above, KNN and decision tree are the two models that could work well. To hold both advantages, here, we use a simple way to combine KNN and decision together (KNN-Tree).
 
+First we train models of KNN and decision tree and get the class label as $y_{knn}$ and $y_{tree}$. Then a weighted sum (with $\alpha$) and threshold comparison (with $\beta$) work together to get the final label. That is
 
+\begin{equation*}
+    y=\left\{
+    \begin{aligned}
+        1,\quad & \alpha y_{knn}+(1-\alpha)y_{tree}>\beta\\
+        0,\quad & \alpha y_{knn}+(1-\alpha)y_{tree}\le\beta
+    \end{aligned}\right.
+\end{equation*}
 
-
-
-
+$\alpha$ and $\beta$ are selected as hyper-parameters.
 
 
 \bibliographystyle{plain}
