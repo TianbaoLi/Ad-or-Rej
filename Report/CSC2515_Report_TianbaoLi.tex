@@ -20,6 +20,7 @@
 \usepackage{amsfonts}       % blackboard math symbols
 \usepackage{nicefrac}       % compact symbols for 1/2, etc.
 \usepackage{microtype}      % microtypography
+\usepackage{amsmath}
 
 \title{Machine Learning Based Graduate Admission Prediction}
 
@@ -128,7 +129,61 @@ Current dataset contains 11056 cases. Due to natural language-based expression, 
 
 \section{Prediction Models}
 
-To make a prediction whether a student will be admitted or rejected (binary classification), several models are trained and compared to get a relatively best model. From the direct perception of the data, in my opinion, decision tree should work well for the problem containing criterion of judgment, also KNN for same class data gathering together. So I also use a model simply conbining decision tree and KNN together and try to get a promotion on accuracy.
+To make a prediction whether a student will be admitted or rejected (binary classification), several models are trained and compared to get a relatively best model. From the direct perception of the data, in my opinion, decision tree should work well for the problem containing criterion of judgment, also KNN for same class data gathering together. So I also use a model simply conbining decision tree and KNN together and try to get a promotion on accuracy. In the following section, we use $y$ to represent class variable and $\{x_1,x_2,\dots, x_n\}$ for features. All the models are implemented by scikit-learn\footnote{\url{http://scikit-learn.org/stable/}}.
+
+\subsection{Naive Bayes}
+
+Naive Bayes is a generative model based on Bayes’ theorem. Furthermore, it gives an assumption on features independency. It means that
+
+$$
+P(x_i|y,x_1,\dots,x_{i-1},x_{i+1},\dots,x_n)=P(x_i|y)
+$$
+
+so the decision rule is that
+
+\newcommand{\argmax}{\operatornamewithlimits{argmax}}
+$$
+\hat{y}=\argmax_yP(y)\prod_{i=1}^nP(x_i|y)
+$$
+
+For implementation, we use MultinomialNB\footnote{\url{http://scikit-learn.org/stable/modules/generated/sklearn.naive_bayes.MultinomialNB.html}} from scikit-learn. To train a better fitting model, alpha (additive (Laplace/Lidstone) smoothing parameter) can be change as hyper-parameter.
+
+\subsection{Logistic Regression}
+
+Logistic regression is a linear classification model. Commonly, the model is optimized by minimize the loss function (take l2 penalty as an example)
+
+$$
+min_{w,c}\frac{1}{2}w^\mathrm{T}w+C\sum_{i=1}^n\log(\exp(-y_i(X_i^\mathrm{T}w+c))+1)
+$$
+
+For implementation, we use LogisticRegression\footnote{\url{http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html}} from scikit-learn. In this model, hype-perameters such as penalty (l1 or l2), C (inverse regularization strength), tol (tolerance for stopping criteria) and some others can be changed.
+
+\subsection{SVM}
+
+Support Vector Machine is also a popular linear classification method with good performance. However, due to its advantages in high feature dimension, it is not expected to work so well for our scenario.
+
+LinearSVC\footnote{\url{http://scikit-learn.org/stable/modules/generated/sklearn.svm.LinearSVC.html}} from scikit-learn. C (penalty parameter of the error term) is being monitored as hyper-parameter.
+
+\subsection{KNN}
+
+Distance-based K Nearest Neighbors is one suitable model for our problem. The first thought is that admitted cases hold the similar value on features, which means they are near in the feature space. It just fits the idea of nearest neighbors and it tends to work well.
+
+For KNN, we use KNeighborsClassifier\foornote{\url{http://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html}} from scikit-learn as the model. Then we try to justify the parameter K (amount of neighbors) to have a higher accuracy.
+
+\subsection{Decision Tree}
+
+\subsection{Random Forest}
+
+\subsection{Neural Networks}
+
+\subsection{Combination of KNN and Decision Tree}
+
+
+
+
+
+
+
 
 
 \bibliographystyle{plain}
