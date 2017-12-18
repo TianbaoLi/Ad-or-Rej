@@ -79,7 +79,7 @@ Students usually finish their graduate application in two ways. The first one is
 
 During the application evaluation, information in many fields of one student is considered, including TOEFL score, GRE score, GPA and and other supplementary materials as undergraduate school, work experience, research experience. Looking in the machine learning way, these indicators can be features of a certain model. We can use massive admission and rejection cases as training data to fit the admission model of a certain graduate program. Till now, decision fot daily useage is mainly made by human experience in this area.
 
-Comparing to human judgement and finding similar cases, many machine learning models seem to have a better prediction. A few related research built the process of decision making. \cite{raghunathan2010demystifying} and \cite{alzahranigot} give out the qualitative influence measurement on each component of the application material. Some work such as \cite{waters2014grade} is used to offer decision making assistance for universities. Work like \cite{bruggink1996statistical}, \cite{moore1998expert} and \cite{gupta2016will} use well-distributed data to build a statistic model and get good result. However, work like ours aims at producing a general prediction but not on a cetrain school. It means more valuable for applicants with multiple school choices. Also, the high quality data with great distribution that they use for certain universities is hard to get. 
+Comparing to human judgement and finding similar cases, many machine learning models seem to have a better prediction. A few related research built the process of decision making. \cite{raghunathan2010demystifying} and \cite{alzahranigot} give out the qualitative influence measurement on each component of the application material. Some work such as \cite{waters2014grade} is used to offer decision making assistance for universities. Work like \cite{bruggink1996statistical}, \cite{moore1998expert} and \cite{gupta2016will} use well-distributed data to build a statistic model and get good result. However, work like ours aims at producing a general prediction but not on a cetrain school. It means more valuable for applicants with multiple school choices. Also, the high quality data with great distribution that they use for certain universities is hard to get.
 
 The contribution of this project is mainly is these points:
 
@@ -111,6 +111,7 @@ Current dataset contains 11056 cases. Due to natural language-based expression, 
         \hline
         result & admission:reject=4.48\\
         most populat school & Columbia University\\
+        year range & [2012,2015]\\
         TOEFL total average & 84.8\\
         TOEFL reading average & 25.2\\
         TOEFL listening average & 22.1\\
@@ -124,6 +125,10 @@ Current dataset contains 11056 cases. Due to natural language-based expression, 
 \caption{Data summary}
 \label{tab: Data_summary}
 \end{table}
+
+\section{Prediction Models}
+
+To make a prediction whether a student will be admitted or rejected (binary classification), several models are trained and compared to get a relatively best model. From the direct perception of the data, in my opinion, decision tree should work well for the problem containing criterion of judgment, also KNN for same class data gathering together. So I also use a model simply conbining decision tree and KNN together and try to get a promotion on accuracy.
 
 
 \bibliographystyle{plain}
