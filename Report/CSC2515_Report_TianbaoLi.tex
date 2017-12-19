@@ -111,7 +111,7 @@ Current dataset contains 11056 cases. Due to natural language-based expression, 
         \textbf{Features for dataset}\\
         \hline
         result & admission:reject=4.48\\
-        most populat school & Columbia University\\
+        most popular school & Columbia University\\
         year range & [2012,2015]\\
         TOEFL total average & 84.8\\
         TOEFL reading average & 25.2\\
@@ -203,14 +203,89 @@ $\alpha$ and $\beta$ are selected as hyper-parameters.
 
 To evaluate the existing and proposed models, we try to use the self-built dataset and predict whether a student can be admitted by a university. To make a better use of the data, at first, we run data cleaning and normalization on the each feature and then calculate the accuracy for each model. Detailed process is introduced as follows.
 
-\subsection{Data Normalization}
+\subsection{Data Cleaning and Normalization}
+
+As out dataset is captured from web with human input, their should be a lot of errors or format inconsistence. To make use of it, the first thing to do is to clean the data and transform the information to the feature that we need. Also, normalizing the data into a similar range can help models work better.
+
+Data cleaning on this dataset contains:
+
+\begin{itemize}
+    \item natural language extraction: there is some information in the inexplicit natrual language words as admission result. Some rules are written for this.
+    \item inconsistence: some information are inconsistence among cases like university name. Regularization work lile string fuzzy matching is needed for this. Here we use python package FuzzyWuzzy\footnote{\url{https://github.com/seatgeek/fuzzywuzzy}} and match user input with common-used university name.
+    \item missing value filling: due to some reson, some cases lack of TOEFL or GRE value. For keeping the influence to a lowest range, we fill them with average value for each.
+    \item data format: the raw data is in csv format, with much comma as a part of values. The data is well-split and transformed into json file finally.
+\end{itemize}
+
+Data normalization on thie dataset contains:
+
+\begin{itemize}
+    \item university: university name is a non-numerical value and hard for training. we use university ranking from Times\footnote{\url{https://www.timeshighereducation.com/world-university-rankings}} and replace the university name. Normally, highly ranked universities have high admission requirement.
+    \item degree: 1 for master and 2 for Ph.D
+    \item application year: map year [2012,2013,2014,2015] into[0.00,0.25,0.50,0.75]. (leave 2016 to 1 behind for future extension)
+    \item decision result: 0 for rejection and 1 for admission (only admission and offer)
+    \item TOEFL score: change total score [0,120] into [0,1] and sub-score from [0,30] into [0,1] by division.
+    $$
+    total\_normalized=total/120
+    $$
+    $$
+    sub\_normalized=sub/30
+    $$
+    \item GRE score: change total score [260,340] into [0,1], Verbal/Quantitative score from [130,170] into [0,1] and writing score from [0,6] into [0,1] by division.
+    $$
+    total\_normalized=(total-260)/80
+    $$
+    $$
+    sub\_normalized=(sub-130)/40
+    $$
+    $$
+    writing\_normalized=writing/6
+    $$
+    \item GPA: most cases have GPA score in the form of 4.0-total or 100-total. Just turn them into [0,1] by official method.
+    \item GPA ranking: transforming into percentile
+\end{itemize}
 
 \subsection{Evaluation Metrics}
 
-\subsection{Model Comparition}
+Evaluation used in the project is one of the most simple by effictive, accuracy. It is shown as this:
 
+$$
+accuracy=\frac{hits}{total}
+$$
 
+\subsection{Model Comparison}
 
+For model comparison, we split the dataset into training data and test data, which test data holds the precentage of 20\%. Also for model training, 20\% of training data is for validation and hyper-paramater choosing.
+
+The detailed train accuracy, test accuracy are shown in Table~\ref{tab: Model_comparison}.
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{cccc}
+    \hline
+    Model & Train accuracy & test accuracy\\
+    \hline
+    MultinomialNB & 0.568401371144 & 0.549190535492\\
+    \hline
+    Logist Regression & 0.620442505453 & 0.683483802443\\
+    \hline
+    SVM & 0.620442505453 & 0.626400996264\\
+    \hline
+    KNN & 0.998753505765 & 0.765877957659\\
+    \hline
+    Decision Tree & 0.999065129324 & 0.752179327522\\
+    \hline
+    Random Forest & 0.999065129324 & 0.753424657534\\
+    \hline
+    Neural Networks & 0.616703022749 & 0.59900373599\\
+    \hline
+    KNN+Decision Tree &  & 0.789539227895\\
+    \hline
+    \end{tabular}
+\caption{Model comparison}
+\label{tab: Model_comparison}
+\end{table}
+
+From the result of the accuracy, best perfoemed existing models are KNN Decision Tree and Random Forest. What's more, out proposed combination model of KNN and Decision Tree improves the accuracy by 2-3 percentage.
 
 
 \bibliographystyle{plain}
