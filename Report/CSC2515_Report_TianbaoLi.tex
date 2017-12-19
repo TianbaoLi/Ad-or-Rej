@@ -21,6 +21,7 @@
 \usepackage{nicefrac}       % compact symbols for 1/2, etc.
 \usepackage{microtype}      % microtypography
 \usepackage{amsmath}
+\usepackage{graphicx}
 
 \title{Machine Learning Based Graduate Admission Prediction}
 
@@ -201,7 +202,16 @@ $\alpha$ and $\beta$ are selected as hyper-parameters.
 
 \section{Experient Evaluation}
 
-To evaluate the existing and proposed models, we try to use the self-built dataset and predict whether a student can be admitted by a university. To make a better use of the data, at first, we run data cleaning and normalization on the each feature and then calculate the accuracy for each model. Detailed process is introduced as follows.
+To evaluate the existing and proposed models, we try to use the self-built dataset and predict whether a student can be admitted by a university. To make a better use of the data, at first, we run data cleaning and normalization on the each feature and then calculate the accuracy for each model.
+
+Detailed process of the project is introduced as follows. is shown as Figure~\ref{fig: Diagram}.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width = 14cm]{Diagram}
+\caption{System diagram}
+\label{fig: Diagram}
+\end{figure}
 
 \subsection{Data Cleaning and Normalization}
 
