@@ -22,6 +22,7 @@
 \usepackage{microtype}      % microtypography
 \usepackage{amsmath}
 \usepackage{graphicx}
+\usepackage{hyperref}
 
 \title{Machine Learning Based Graduate Admission Prediction}
 
@@ -70,35 +71,35 @@
 \maketitle
 
 \begin{abstract}
-Graduation application to the US, Canada and the UK is a hot topic for students around the world, especially in China during the past years. Admission committee always gives out a final decision according to the student's background in many perspectives. Such decision can be considered as a classification problem and there is no much work on it by now. In this project, we applied several machine learning algorithms on our self-built dataset and trained models with relatively high accuracy.
+Graduation application to the US, Canada and the UK is a hot topic for students around the world, especially in China during past years. Admission committee always gives out a final decision according to the students' background in many perspectives. Such decision can be considered as a classification problem of admission or rejection. In this project, we applied several machine learning algorithms on our self-built dataset and got models with relatively high accuracy.
 \end{abstract}
 
 \section{Introduction}
 
-Nowadays, more and more Chinese students start to take graduate study overseas, usually in the US, Canada, the UK and somewhere else. Then, the problem just comes with it. How could they know whether a graduate school is going to offer admission or which one is the best fit?
+Nowadays, more and more Chinese students start to take graduate study overseas, usually in the US, Canada, the UK and somewhere else. Then, the problem just comes with it. How could they know whether a graduate school is going to offer admission or rejection?
 
-Students usually finish their graduate application in two ways. The first one is to find an agency for help. Such agencies collect application data for year and give advice based on history cases and percentage on multiple indicators. However, misjudging always happens just because graduate admission consists of complex evaluation in many areas. The second type of application is called DIY-application, finished by students themselves. Due to lack of information, many students lose better offers.
+Students usually finish their graduate application in two ways. The first one is to find an agency for help. Such agencies collect application data for year and give advice based on history cases. However, misjudging always happens just because graduate admission consists of complex evaluation in multiple indicators. The second type of application is called DIY-application, finished by students themselves. Due to lack of information, many students lose better offers.
 
-During the application evaluation, information in many fields of one student is considered, including TOEFL score, GRE score, GPA and other supplementary materials as undergraduate school, work experience, research experience. Looking in the machine learning way, these indicators can be features of a certain model. We can use massive admission and rejection cases as training data and fit the admission model of a certain graduate program. Till now, decision for daily usage is mainly made by human experience in this area.
+During the application evaluation, information in many fields of one student is considered, including TOEFL\footnote{\url{https://www.ets.org/toefl}} score, GRE\footnote{\url{https://www.ets.org/gre}} score, GPA and other supplementary materials as undergraduate school, work experience, research experience. Looking in the machine learning way, these indicators can be features of a certain model. We can use massive admission and rejection cases as training data and fit the admission model. Till now, decision for daily usage is mainly made by human experience for this.
 
-Comparing to human judgement and finding similar cases, many machine learning models seem to have a better prediction. A few related research built the process of decision making. \cite{raghunathan2010demystifying} and \cite{alzahranigot} give out the qualitative influence measurement on each part of the application material. Some work such as \cite{waters2014grade} is used to offer decision making assistance for universities. Work like \cite{bruggink1996statistical}, \cite{moore1998expert} and \cite{gupta2016will} use well-distributed data to build a statistic model and get good result. However, work like ours aims at producing a general prediction but not on a certain school. It means more valuable for applicants with multiple school choices. Also, the high quality data with great distribution that they use for certain universities is hard to get.
+Comparing to human judgement and finding similar cases, many machine learning models seem to have a better prediction. A few related research built the process of decision making. \cite{alzahranigot} and \cite{raghunathan2010demystifying} give out the qualitative influence measurement on each application component. Some work such as \cite{waters2014grade} offers decision making assistance for universities. Work like \cite{bruggink1996statistical}, \cite{gupta2016will} and \cite{moore1998expert} use well-distributed data to build a statistic model and get good prediction. However, work like ours aims at producing a general prediction but not on a certain school. It means more valuable for applicants with multiple school choices. Also, they use high quality data with great distribution for certain universities. It is hard to generalizee to multi-chhoise application.
 
-The contribution to this project is mainly is these points:
+The contribution of this project is mainly in these points:
 
 \begin{itemize}
-    \item Dataset built-up: here I decide to use data from the BBS GTER\footnote{\url{http://bbs.gter.net/}}, one of the most popular graduate application BBSes in China. Many Chinese students post their admission decision here. I decide to write crawler to collection data of admission and rejection. Also due to the low data quality, much work on data cleaning needs to be done. Such data can be used for related purpose in the future research\\
-    \item Model training: here I decide to train several popular machine learning models on such data, including neural networks, decision tree, naive bayes, etc, find better fit model and make optimization.\\
+    \item Dataset building: here we decide to use data from the BBS GTER\footnote{\url{http://bbs.gter.net/}}, one of the most popular graduate application BBSes in China. Many Chinese students post their admission decision and personal information here. I decide to write crawlers to collect data of these. Also due to the low data quality, much work on data cleaning is in great need. Such data can be used for related purpose in the future research.\\
+    \item Model training: here I decide to train several popular machine learning models on such dataset, including neural networks, decision tree, KNN, etc, to find better fitting model and make optimization.\\
 \end{itemize}
 
 \subsection*{Clarification}
 
-This project is finished by myself alone. With a self-defined dataset, some related work may continue on it afterwards.
+This project is finished by myself alone. Based on a self-defined dataset, some related work may continue on it afterwards. The project can be accessed at \href{https://github.com/TuringMacLee/Ad-or-Rej}{https://github.com/TuringMacLee/Ad-or-Rej}.
 
 \section{Data Summary}
 
-Chinese students take a large portion in graduate application, however, there is no available dataset about it. So, for the first part of this project, we intent to built a dataset about Chinese student graduate application. We wrote web crawler to collect application data from GTER BBS, both admission and rejection application in the range of 2012-2016. Since web data usually holds low quality, some data cleaning skills are applied on the dataset to make it easy for model training.
+Chinese students take a large portion in graduate application, however, there is no enough open dataset about it. So, for the first part of this project, we intent to built a dataset about Chinese student graduate application. We wrote web crawlers to collect application data from GTER BBS, both admission and rejection application in the range of 2012-2015. Since web data is usually in low quality, some data cleaning skills are applied on the dataset to make it easy for model training.
 
-Current dataset has 11056 cases. Due to natural language-based expression, the raw data is hard to catch related feature. Here, we only extract information about decision, target school, degree, year of application, TOEFL\footnote{\url{https://www.ets.org/toefl}} score, GRE\footnote{\url{https://www.ets.org/gre}} score, GPA, GPA ranking. Such information is transformed into 14 features and well normalized for training. Summary of the dataset is shown in Table~\ref{tab: Data_summary}.
+Current dataset has 11056 cases. Due to natural language-based expression, raw data is hard to catch related features. Here, we only extract information about decision, target school, degree, year of application, TOEFL score, GRE score, GPA, GPA ranking. Such information is transformed into 14 features and well normalized for training. Summary of the dataset is shown in Table~\ref{tab: Data_summary}.
 
 \begin{table}[htbp]
 
@@ -112,7 +113,7 @@ Current dataset has 11056 cases. Due to natural language-based expression, the r
         \textbf{Features for dataset}\\
         \hline
         result & admission:reject=4.48\\
-        most popular school & Columbia University\\
+        the most popular school & Columbia University\\
         year range & [2012,2015]\\
         TOEFL total average & 84.8\\
         TOEFL reading average & 25.2\\
@@ -130,7 +131,7 @@ Current dataset has 11056 cases. Due to natural language-based expression, the r
 
 \section{Prediction Models}
 
-To predict whether a student will be admitted or rejected (binary classification), several models are trained and compared to get a relatively best model. From the direct perception of the data, in my opinion, decision tree should work well for the problem containing criterion of judgment, also KNN for same class data gathering together. So I also use a model simply combining decision tree and KNN together and try to get a promotion on accuracy. In the following section, we use $y$ to represent class variable and $\{x_1,x_2,\dots, x_n\}$ for features. All the models are implemented by scikit-learn\footnote{\url{http://scikit-learn.org/stable/}}.
+To predict whether a student will be admitted or rejected (binary classification), several models are trained and compared to get a relatively best model. From the direct perception of the data, in my opinion, decision tree should work well for the problem containing criterions of judgment, also KNN (k Nearest Neaighbors) for same class data gathering together. Then, we also design a model simply combining decision tree and KNN together and try to get a promotion on accuracy. In the following section, we use $y$ to represent the class variable (0 or 1) and $\{x_1,x_2,\dots, x_n\}$ for features. All the models are implemented by scikit-learn\footnote{\url{http://scikit-learn.org/stable/}}.
 
 \subsection{Naive Bayes}
 
@@ -147,7 +148,7 @@ $$
 \hat{y}=\argmax_yP(y)\prod_{i=1}^nP(x_i|y)
 $$
 
-For implementation, we use MultinomialNB\footnote{\url{http://scikit-learn.org/stable/modules/generated/sklearn.naive_bayes.MultinomialNB.html}} from scikit-learn. To train a better fitting model, alpha (additive (Laplace/Lidstone) smoothing parameter) can be change as hyper-parameter.
+For implementation, we use MultinomialNB\footnote{\url{http://scikit-learn.org/stable/modules/generated/sklearn.naive_bayes.MultinomialNB.html}} from scikit-learn. To train a better fitting model, alpha (additive (Laplace/Lidstone) smoothing parameter) can be changed as hyper-parameter.
 
 \subsection{Logistic Regression}
 
@@ -161,33 +162,33 @@ For implementation, we use LogisticRegression\footnote{\url{http://scikit-learn.
 
 \subsection{SVM}
 
-Support Vector Machine is also a popular linear classification method with good performance. However, due to its advantages in high feature dimension, it is not expected to work so well for our scenario.
+SVM (Support Vector Machine) is also a popular linear classification method with good performance. However, due to its advantages in high feature dimension, it is not expected to work better for our scenario.
 
-LinearSVC\footnote{\url{http://scikit-learn.org/stable/modules/generated/sklearn.svm.LinearSVC.html}} from scikit-learn. C (penalty parameter of the error term) is being monitored as hyper-parameter.
+In LinearSVC\footnote{\url{http://scikit-learn.org/stable/modules/generated/sklearn.svm.LinearSVC.html}} from scikit-learn. C (penalty parameter of the error term) is monitored as the hyper-parameter.
 
 \subsection{KNN}
 
-Distance-based K Nearest Neighbors is one suitable model for our problem. The first thought is that admitted cases hold the similar value on features, which means they are near in the feature space. It just fits the idea of nearest neighbors and it tends to work well.
+Distance-based KNN (K Nearest Neighbors) is one suitable model for our problem. The first thought is that admitted cases hold the similar value on features, which means they are near in the feature space. It just fits the idea of nearest neighbors and tends to work well.
 
-For KNN, we use KNeighborsClassifier\footnote{\url{http://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html}} from scikit-learn as the model. Then we try to justify the hyper-parameter K (amount of neighbors) to have a higher accuracy.
+For KNN, we use KNeighborsClassifier\footnote{\url{http://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html}} from scikit-learn for training the model. Then we try to find a  the hyper-parameter K (amount of neighbors) for a higher accuracy.
 
 \subsection{Decision Tree}
 
-During the human admission process, it is usually divided into several decision rules, such as if the GPA high enough or if English using hits the criteria. Such process is similar to the decision tree classification. Also, the representative capability increases with the tree comes deeper.
+During the human admission process, it is usually divided into several decision rules, such as if the GPA high enough or if English profiency hits the criteria. Such process is similar to the decision tree classifier. Also, the representative capability increases with the tree comes deeper.
 
-In scikit-learn, DecisionTreeClassifier\footnote{\url{http://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html}} can be used in this problem. For the hyper-parameter max\_depth, it could overfit when larger and underfit when smaller. So the parameter adjustment can be applied on this.
+In scikit-learn, DecisionTreeClassifier\footnote{\url{http://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html}} is suitable for this problem. For the hyper-parameter max\_depth, the tree could overfit when larger and underfit when it comes smaller. So the parameter adjustment can be applied on this.
 
-Futhermore, researchers usually use decision trees with much randomness, that is random forest. Comprised of several different decision trees, it often has better usually results on complex problem.
+Futhermore, researchers usually use decision trees with much randomness, that is random forest. Comprised of several different decision trees, it often has better results on complex problem.
 
 \subsection{Neural Networks}
 
-As the most popular model, neural networks is solving quite different problems, linear or non-linear, simple or complex... Our project also play a easy try on this. MLPClassifier\footnote{\url{http://scikit-learn.org/stable/modules/generated/sklearn.neural_network.MLPClassifier.html}} is a non-GPU version implementation for small-scale application. Hyper-parameters of hidden layer sizes, activation functions are L2 penalty (regularization term) parameter are adjusting to achieve better.
+As the most popular ML model, NN solves quite different problems, linear or non-linear, simple or complex... Our project also plays a easy try on this. MLPClassifier\footnote{\url{http://scikit-learn.org/stable/modules/generated/sklearn.neural_network.MLPClassifier.html}} is a non-GPU version implementation for small-scale neural networks. Hyper-parameters of hidden layer sizes, activation functions and L2 penalty (regularization term) parameter are adjusting to achieve better.
 
 \subsection{Combination of KNN and Decision Tree}
 
-Following the discussion above, KNN and decision tree are the two models that could work well. To hold both advantages, here, we use a simple way to combine KNN and decision together (KNN-Tree).
+Following the discussion above, KNN and decision tree are the two models that could work well. To hold both the advantages, here, we use a simple way to combine KNN and decision together (KNN-Tree).
 
-First we train models of KNN and decision tree and get the class label as $y_{knn}$ and $y_{tree}$. Then a weighted sum (with $\alpha$) and threshold comparison (with $\beta$) work together to get the final label. That is
+First we train models of KNN and decision tree and get the class label as $y_{knn}$ and $y_{tree}$. Then a weighted sum (with $\alpha$) and a threshold ($\beta$) work together to get the final label. That is
 
 \begin{equation*}
     y=\left\{
@@ -204,7 +205,7 @@ $\alpha$ and $\beta$ are selected as hyper-parameters.
 
 To evaluate the existing and proposed models, we try to use the self-built dataset and predict whether a student can be admitted by a university. To make a better use of the data, at first, we run data cleaning and normalization on the each feature and then calculate the accuracy for each model.
 
-Detailed process of the project is introduced as follows. is shown as Figure~\ref{fig: Diagram}.
+Detailed process of the project is introduced as follows, and shown in Figure~\ref{fig: Diagram}.
 
 \begin{figure}[htbp]
 \centering
@@ -215,32 +216,32 @@ Detailed process of the project is introduced as follows. is shown as Figure~\re
 
 \subsection{Data Cleaning and Normalization}
 
-As our dataset is crawled from web with human response, there should be a lot of errors or format inconsistent. To make use of it, the first thing to do is to clean the data and transform the information to the feature that we need. Also, normalizing the data into a similar range can help models work better.
+As our dataset is crawled from web with human response, there should be a lot of errors or format inconsistent. To make good use of it, the first thing to do is to clean the data and transform the information on the feature that we need. Also, normalizing the data into a similar range can help models work better.
 
 Data cleaning on this dataset contains:
 
 \begin{itemize}
-    \item natural language extraction: there is some information in the inexplicit natural language words as admission result. Some rules are written for this.
-    \item inconsistency: some information are inconsistent among cases like university name. Regularization work lile string fuzzy matching is needed for this. Here we use python package FuzzyWuzzy\footnote{\url{https://github.com/seatgeek/fuzzywuzzy}} and match user input with common-used university name.
-    \item missing value filling: due to some reason, some cases lack of TOEFL or GRE value. For keeping the influence to a lowest range, we fill them with average value for each.
-    \item data format: the raw data is in csv format, with many commas as a part of values. The data is well-split and transformed into json file finally.
+    \item natural language extraction: there is some information in inexplicit natural language words such as admission result. Some rules are written for this.
+    \item inconsistency: some information are inconsistent among cases like university name. Regularization work like string fuzzy matching is needed for this. Here we use python package FuzzyWuzzy\footnote{\url{https://github.com/seatgeek/fuzzywuzzy}} and match user input with commonly used university name.
+    \item missing value filling: due to some reason, some cases lack of TOEFL or GRE score. For reducing the impact, we fill them with the average value for each.
+    \item data format: the raw data is in csv format, with many commas as a part of values. The data is well-split and transformed into a json file finally.
 \end{itemize}
 
 Data normalization on the dataset contains:
 
 \begin{itemize}
-    \item university: university name is a non-numerical value and hard for training. we use university ranking from Times\footnote{\url{https://www.timeshighereducation.com/world-university-rankings}} and replace the university name. Normally, highly ranked universities have high admission requirement.
+    \item university: university name is a non-numerical value so hard for training. we use university ranking from Times\footnote{\url{https://www.timeshighereducation.com/world-university-rankings}} and replace the university names by the ranking. Normally, highly ranked universities have high admission requirements.
     \item degree: 1 for master and 2 for Ph.D
-    \item application year: map year [2012,2013,2014,2015] into[0.00,0.25,0.50,0.75]. (leave 2016 to 1 behind for future extension)
-    \item decision result: 0 for rejection and 1 for admission (only admission and offer)
-    \item TOEFL score: change total score [0,120] into [0,1] and sub-score from [0,30] into [0,1] by division.
+    \item application year: mapping year [2012,2013,2014,2015] into[0.00,0.25,0.50,0.75]. (leave 2016 to 1 behind for future extension)
+    \item decision result: 0 for rejection and 1 for admission (admission and offer)
+    \item TOEFL score: change total score from range [0,120] into [0,1] and sub-score from [0,30] into [0,1] by division.
     $$
     total\_normalized=total/120
     $$
     $$
     sub\_normalized=sub/30
     $$
-    \item GRE score: change total score [260,340] into [0,1], Verbal/Quantitative score from [130,170] into [0,1] and writing score from [0,6] into [0,1] by division.
+    \item GRE score: change total score from range [260,340] into [0,1], Verbal/Quantitative score from [130,170] into [0,1] and writing score from [0,6] into [0,1].
     $$
     total\_normalized=(total-260)/80
     $$
@@ -250,13 +251,13 @@ Data normalization on the dataset contains:
     $$
     writing\_normalized=writing/6
     $$
-    \item GPA: most cases have GPA score in the form of 4.0-total or 100-total. Just turn them into [0,1] by official method.
+    \item GPA: most data points have GPA score in the form of 4.0-total or 100-total. Just turn them into [0,1] by official method.
     \item GPA ranking: transforming into percentile
 \end{itemize}
 
 \subsection{Evaluation Metrics}
 
-Evaluation used in the project is one of the most simple but effective, accuracy. It is shown as this:
+Evaluation used in the project is one of the most simple but effective metrics, accuracy. It is shown as this:
 
 $$
 accuracy=\frac{hits}{total}
@@ -264,7 +265,9 @@ $$
 
 \subsection{Model Comparison}
 
-For model comparison, we split the dataset into training data and test data, which test data holds the percentage of 20\%. Also for model training, 20\% of training data is for validation and hyper-paramater choosing.
+For model comparison, we split the dataset into training data and test data, which test data holds the percentage of 20\%. Also for model training, 20\% of training data is left behind for validation and hyper-paramater choosing.
+
+Also, 80\% for the data points have the result of admission. Skewed data is hard to train and easy to give out a bad prediction. Here, we randomly select admission data and rejection data with the same amount.
 
 The detailed train accuracy, test accuracy are shown in Table~\ref{tab: Model_comparison}.
 
@@ -295,22 +298,22 @@ The detailed train accuracy, test accuracy are shown in Table~\ref{tab: Model_co
 \label{tab: Model_comparison}
 \end{table}
 
-From the result of the accuracy, best performed existing models are KNN Decision Tree and Random Forest. What's more, out proposed combination model of KNN and Decision Tree improves the accuracy by 2-3 percentage.
+From the result of test accuracy, best performed existing models are KNN Decision Tree and Random Forest. What's more, out proposed combination model of KNN and Decision Tree improves the accuracy by 2-3 percentage.
 
 \section{Future Work}
 
-Due to the time of a final project, the proposed problem was just solved simply with a relatively good result. However, for a prediction that could make value, more work could be done in the future, including
+Due to the time of a final project, the proposed problem was just solved simply with a relatively good result. However, for a prediction that could value for students, more work could be done in the future, including
 
 \begin{itemize}
-    \item our models only concentrate on global admission, but not a certain university of even graduate program. When more specific data is collected, out system can also do the work like \cite{bruggink1996statistical}, \cite{moore1998expert} and \cite{gupta2016will}.
+    \item our models only concentrate on global admission, but not a certain university or even graduate program. When more specific data is collected, out system can also do the work like \cite{bruggink1996statistical}, \cite{gupta2016will} and \cite{moore1998expert}.
     \item only part of the information we get is used for model training. Hope more skills can be used to deal with natural-languaged info like research outcome, internship experience, awards and transform them into well-scaled features.
-    \item for the project we only use some existing algorithms and propose one simple combination of well-performed ones. More complex can apply on this problem, especially neural networks.
+    \item for the project, we only use some existing algorithms and propose one simple combination of well-performed ones. More complex models can apply on this problem, especially well tuned neural networks.
     \item also based on what we have done, application recommendation on university can be made as a similar regression problem (on university ranking range) that values much.
 \end{itemize}
 
 \section{Conclusion}
 
-This paper introduces the project for make prediction on graduate admission in machine learning methods. Our goal is to give out application assistance for students on whether he/she will be admitted by a university. We collected from true BBS data and made it as a well-organized dataset. Then we trained several existing algorithms and combined two well-performed models. The KNN with Decision Tree model has an accuracy of 79.0\% on test set which can be a part of application assistance. By opening the self-built dataset, hope more work could be done on this problem.
+This paper introduces the project for making prediction on graduate admission in machine learning methods. Our goal is to offer application assistance for students on whether he/she will be admitted by a university. We collect true BBS data and made it as a well-organized dataset. Then we train several existing algorithms and combine two well-performed models. The KNN with Decision Tree model has an accuracy of 79.0\% on test set which can be a part of application assistance. By opening the self-built dataset for research, hope more work could be done on this problem.
 
 \bibliographystyle{plain}
 \bibliography{CSC2515_Report_TianbaoLi}

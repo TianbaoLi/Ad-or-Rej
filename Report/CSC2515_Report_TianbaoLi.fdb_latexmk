@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex CSC2515_Report_TianbaoLi"] 1513674679 "CSC2515_Report_TianbaoLi.aux" "CSC2515_Report_TianbaoLi.bbl" "CSC2515_Report_TianbaoLi" 1513675676
+["bibtex CSC2515_Report_TianbaoLi"] 1513747267 "CSC2515_Report_TianbaoLi.aux" "CSC2515_Report_TianbaoLi.bbl" "CSC2515_Report_TianbaoLi" 1513747318
   "/usr/local/texlive/2017/texmf-dist/bibtex/bst/base/plain.bst" 1480098433 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "CSC2515_Report_TianbaoLi.aux" 1513675676 3299 72bbfeaa9b7a3e55caf0d8f4573b9af2 ""
+  "CSC2515_Report_TianbaoLi.aux" 1513747318 3299 9de21029b2c9b8605c7a471f22e523e4 ""
   "CSC2515_Report_TianbaoLi.bib" 1513495726 1820 a5fd26aa907ed0f5f42ad35ba218ad05 ""
   (generated)
   "CSC2515_Report_TianbaoLi.bbl"
   "CSC2515_Report_TianbaoLi.blg"
-["pdflatex"] 1513675676 "CSC2515_Report_TianbaoLi.tex" "CSC2515_Report_TianbaoLi.pdf" "CSC2515_Report_TianbaoLi" 1513675676
+["pdflatex"] 1513747317 "CSC2515_Report_TianbaoLi.tex" "CSC2515_Report_TianbaoLi.pdf" "CSC2515_Report_TianbaoLi" 1513747318
   "/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc" 1480098666 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1480098666 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2017/texmf-dist/fonts/map/fontname/texfonts.map" 1480098670 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
@@ -109,10 +109,10 @@
   "/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1506351677 2413399 a34414952447e5770f00490a7226a53e ""
   "/usr/local/texlive/2017/texmf-var/web2c/pdftex/pdflatex.fmt" 1506351701 4130359 98a892baff85034bca352bb12374bc17 ""
   "/usr/local/texlive/2017/texmf.cnf" 1506351666 455 5b996dcaa0eb4ef14a83b026bc0a008c ""
-  "CSC2515_Report_TianbaoLi.aux" 1513675676 3299 72bbfeaa9b7a3e55caf0d8f4573b9af2 ""
-  "CSC2515_Report_TianbaoLi.bbl" 1513674679 1329 185e7d87831c4cc2a14c5883d7c9d215 "bibtex CSC2515_Report_TianbaoLi"
-  "CSC2515_Report_TianbaoLi.out" 1513675676 954 a81c388c7da9fdc6bb0953a953e261c8 ""
-  "CSC2515_Report_TianbaoLi.tex" 1513675676 19033 7defe920d110ddb3c642ede5e0d46413 ""
+  "CSC2515_Report_TianbaoLi.aux" 1513747318 3299 9de21029b2c9b8605c7a471f22e523e4 ""
+  "CSC2515_Report_TianbaoLi.bbl" 1513747267 1329 185e7d87831c4cc2a14c5883d7c9d215 "bibtex CSC2515_Report_TianbaoLi"
+  "CSC2515_Report_TianbaoLi.out" 1513747318 954 a81c388c7da9fdc6bb0953a953e261c8 ""
+  "CSC2515_Report_TianbaoLi.tex" 1513747317 19450 3396c8ea5f987c861ddd65c513fb6826 ""
   "Diagram.png" 1513674725 20688 9027473fe49a6f5605cd6ea09b500c6d ""
   "nips_2017.sty" 1509462197 10348 6710e28db6fbb0acfa35d4ff6a09d8ef ""
   (generated)
